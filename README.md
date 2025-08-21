@@ -1,5 +1,5 @@
 ## Sumic Online Beta v0.1.0
-## 📁 Project Structure
+## Project Structure
 
 ```
 react_app/
@@ -39,7 +39,7 @@ const ProjectRoutes = () => {
 ```
 
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built by [kalanxi Dixon](https://mdixon.vercel.app/)
 - Powered by Vite
