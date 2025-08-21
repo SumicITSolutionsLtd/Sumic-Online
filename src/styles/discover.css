@@ -1,0 +1,122 @@
+/* Opportunities.css */
+.opportunities {
+  padding: 40px;
+  background: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.opportunity-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.opportunity-col {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.col-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.col-header h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.col-header a {
+  font-size: 14px;
+  color: #6b6c6d;
+  text-decoration: none;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+}
+
+.product-info {
+  padding: 10px;
+}
+
+.product-info strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+
+.product-info .tag {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 12px;
+  background: #ffcc00;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.product-grid.big {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product-card.small img {
+  object-fit: cover;
+}
+
+.small {
+    margin-top: 1rem;
+}
+
+.op-extra{
+    border-radius: 20px;
+}
+
+.top-deals-top{
+
+    display: flex;
+}
+
+.smaller{
+padding: .8rem;
+font-size: 1.2rem;
+color: #555;
+align-content: center;
+font-weight: 600;
+}
+
+.deals-top-img{
+width: 30%;
+padding: .8rem;
+border-radius: 20px;
+}
+
+.discover_title{
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.quad{
+    border-radius: 20px;
+}

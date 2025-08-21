@@ -1,0 +1,52 @@
+.stats-section{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 25rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    /* background-color: red; */
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stats_title{
+    width: 100%;
+    background-color: red;
+    font-weight: 00;
+    font-size: 44px;
+}
+
+.stats-area{
+    background-color: green;
+    display: flex;
+    width: 70%;
+
+    flex-direction: column;
+}
+
+.stats-item{
+ padding-left: .8rem;
+border-color: gray;
+}
+
+.top-stats{
+    gap: 2rem;
+    display: flex;
+    /* background-color: white; */
+}
+
+.stats-item-title{
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.stats-item-desc{
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.lower-stats{
+margin-top: 1rem;
+}
