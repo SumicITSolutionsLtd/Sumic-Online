@@ -42,7 +42,7 @@
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 15px;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
 }
 
 .product-card img {
@@ -118,5 +118,14 @@ border-radius: 20px;
 }
 
 .quad{
+    border-radius: 20px;
+}
+
+.rec-product-image{
+    height: 13rem;
+}
+
+.best-seller{
+    padding: 1rem;
     border-radius: 20px;
 }

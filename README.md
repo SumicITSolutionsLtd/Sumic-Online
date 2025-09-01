@@ -1,4 +1,4 @@
-## Sumic Online Beta v0.1.0
+## Sumic-online Beta v0.1.0
 ## Project Structure
 
 ```

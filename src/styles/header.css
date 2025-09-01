@@ -1,10 +1,31 @@
 .sumic_nav{
      color: white;
     display: flex;
+    transition: background-color 0.3s ease;
     position: fixed;
     top: 0;
     width: 100%;
     flex-direction: column;
+}
+
+
+.sumic_nav.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Make all text inside header black when scrolled */
+.sumic_nav.scrolled p,
+.sumic_nav.scrolled .header_ic p,
+.sumic_nav.scrolled .header_extras_link {
+  color: black;
+}
+
+/* You may want to adjust icon colors if needed */
+.sumic_nav.scrolled .header_ic svg,
+.sumic_nav.scrolled .header_extras_ic {
+  color: black;
 }
 
 .header{
@@ -14,7 +35,6 @@
     color: white;
     align-items: center;
     padding: 2rem 2.5rem;
-
 }
 
 .logo{

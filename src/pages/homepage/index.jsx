@@ -16,6 +16,8 @@ import "../../styles/homepage.css"
 import CardFeatures from './components/CardFeatures';
 import Stats from "./components/Stats.jsx";
 import Discover from './components/Discover';
+import FromFactory from './components/FromFactory.jsx';
+import Logo from "../../media/dark_logo.png"
 
 const Homepage = () => {
   return (
@@ -30,7 +32,8 @@ const Homepage = () => {
 <CardFeatures/>
 <Stats/>
 <Discover/>
-{/* 
+<FromFactory/>
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-3">
@@ -53,12 +56,10 @@ const Homepage = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <Icon name="Leaf" size={20} color="white" />
-                </div>
-                <span className="text-xl font-semibold text-foreground">
-                  SumicIT
-                </span>
+                {/* <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center"> */}
+                <img src={Logo} alt="sumic online logo" className="logo" />
+                {/* </div> */}
+        
               </div>
               <p className="text-muted-foreground mb-4 max-w-md">
                 Your trusted B2B marketplace connecting manufacturers, suppliers, and business buyers worldwide. Find quality products, negotiate better prices, and build lasting business relationships.
@@ -114,7 +115,7 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 };

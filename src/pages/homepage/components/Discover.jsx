@@ -28,7 +28,7 @@ return (
             <img src={J4} alt="Hot selling" />
           </div>
           <div className="product-grid">
-            <img className='op-extra' src={J1} alt="extra1" />
+            <img className='op-extra' src={J1} alt="extra2" />
             <img className='op-extra' src={J1} alt="extra2" />
           </div>
         </div>
@@ -46,10 +46,11 @@ return (
             <img className='quad' src={J2} alt="new4" />
           </div>
           <div className="product-card small">
-            <img src={Rect} alt="This week" />
+            <img className='rec-product-image' src={Rect} alt="This week" />
+
             <div className="product-info">
               <strong>New this week</strong>
-              <p>Products f`rom Verified Suppliers only</p>
+              <p>Products from Verified Suppliers only</p>
             </div>
           </div>
         </div>
@@ -60,20 +61,20 @@ return (
             <h3>Top deals</h3>
             <a href="#">View more</a>
           </div>
+       {/* smaller product */}
           <div className="product-card top-deals-top">
             <img style={{width: '30%'}} 
             className='deals-top-img' src={J1} alt="deal1" />
             <div className="product-info smaller">
               <p>180-day lowest price</p>
-            </div>
-
-          
+            </div>          
           </div>
+          
           <div className="product-card">
           <div className="product-info">
               <p>Deals on best sellers</p>
             </div>
-            <img src={J4} alt="deal2" />    
+            <img className='best-seller' src={J4} alt="deal2" />    
           </div>
         </div>
       </div>

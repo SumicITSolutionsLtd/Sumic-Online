@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react"; // add useState import
 import "../styles/header.css";
 import Logo from "../media/logo.png";
+import DarkLogo from "../media/dark_logo.png";
 import { Link } from "react-router-dom";
 import {
   ShoppingCart,
@@ -12,10 +13,25 @@ import {
 } from "lucide-react";
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="sumic_nav">
+    <div className={`sumic_nav ${scrolled ? "scrolled" : ""}`}>
       <div className="header">
-        <img src={Logo} alt="sumic online logo" className="logo" />
+        <img
+        style={{marginLeft:".8rem"}}
+          src={scrolled ? DarkLogo : Logo}
+          alt="sumic online logo"
+          className="logo"
+        />
 
         <div className="nav">
           <div className="header_location">
@@ -44,25 +60,25 @@ function Header() {
           </Link>
         </div>
       </div>
-      <div className="header_extras">
-        {/* header_extras_left */}
-        <div className="header_extras-left">
-          <div className="ic_nest" title="Login">
-            <Menu className="header_extras_ic" size={22} />
-            <p className="header_extras_link">All Categories</p>
-            <p className="header_extras_link">Featured selections</p>
-            <p className="header_extras_link">Order protection</p>
+         {!scrolled && (
+        <div className="header_extras">
+          <div className="header_extras-left">
+            <div className="ic_nest" title="Login">
+              <Menu className="header_extras_ic" size={22} />
+              <p className="header_extras_link">All Categories</p>
+              <p className="header_extras_link">Featured selections</p>
+              <p className="header_extras_link">Order protection</p>
+            </div>
+          </div>
+          <div className="header_extras-right">
+            <p className="header_extras_link">AI sourcing agent</p>
+            <p className="header_extras_link">Help center</p>
+            <p className="header_extras_link">More from Sumic</p>
+            <p className="header_extras_link">Become a supplier</p>
           </div>
         </div>
-        {/* header_extras_right */}
-        <div className="header_extras-right">
-          <p className="header_extras_link">AI sourcing agent</p>
-          {/* <p className='header_extras_link'>Buyer central</p> */}
-          <p className="header_extras_link">Help center</p>
-          <p className="header_extras_link">More from Sumic</p>
-          <p className="header_extras_link">Become a supplier</p>
-        </div>
-      </div>{" "}
+      )}
+   
     </div>
   );
 }
