@@ -18,6 +18,7 @@ import Stats from "./components/Stats.jsx";
 import Discover from './components/Discover';
 import FromFactory from './components/FromFactory.jsx';
 import Footer from '../../components/Footer';
+import MarketplaceSection from '../../components/ui/MarketplaceSection';
 
 const Homepage = () => {
   return (
@@ -32,15 +33,12 @@ const Homepage = () => {
 <CardFeatures/>
 <Stats/>
 <Discover/>
+{/* main content */}
+      <MarketplaceSection />
+
+      {/* extras */}
+
 <FromFactory/>
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* featured will go here and extra cards */}
-            <div className="lg:col-span-9 space-y-8">
-          
-          </div>
-      </main>
-
 <Footer />
     </div>
   );

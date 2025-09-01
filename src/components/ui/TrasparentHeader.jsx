@@ -153,17 +153,17 @@ const TrasparentHeader = () => {
             <p>English</p>
           </button>
 
-          <Link to="/chat" className="header_ic" title="Chat">
+          <Link to="/" className="header_ic" title="Chat">
             <MessageCircle size={22} />
           </Link>
-          <Link to="/orders" className="header_ic" title="Orders">
+          <Link to="/" className="header_ic" title="Orders">
             <ClipboardList size={22} />
           </Link>
 
-          <Link to="/cart" className="header_ic" title="Cart">
+          <Link to="/" className="header_ic" title="Cart">
             <ShoppingCart size={22} />
           </Link>
-          <Link to="/login" className="header_ic ic_nest" title="Login">
+          <Link to="/" className="header_ic ic_nest" title="Login">
             <User size={22} />
             <p>Sign in</p>
           </Link>
