@@ -1,9 +1,10 @@
-import React, { useState, useEffect, Fragment } from "react"; // add useState import
+import React, { useState, useEffect } from "react"; // add useState import
 import "../../styles/header.css";
 import Logo from "../../media/logo.png";
 import DarkLogo from "../../media/dark_logo.png";
 import { Link } from "react-router-dom";
-import MegaMenu, { getAllCategoriesMegaMenuData } from './MegaMenu';
+import CategoriesMegaMenu, { getAllCategoriesMegaMenuData } from './megamenus/CategoriesMegaMenu';
+import AISourcingMegaMenu from './megamenus/AISourcingMegaMenu';
 import {
   ShoppingCart,
   Menu,
@@ -17,8 +18,12 @@ const TrasparentHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [megaMenuData, setMegaMenuData] = useState(null);
+  const [showAISourcingMenu, setShowAISourcingMenu] = useState(false);
 
   const handleAllCategoriesHover = () => {
+    // Close AI Sourcing menu if open
+    setShowAISourcingMenu(false);
+    
     if (!showMegaMenu) {
       setMegaMenuData(getAllCategoriesMegaMenuData());
       setShowMegaMenu(true);
@@ -27,12 +32,25 @@ const TrasparentHeader = () => {
 
   const handleMegaMenuLeave = () => {
     setShowMegaMenu(false);
+    setShowAISourcingMenu(false);
     // Delay clearing data to prevent flicker
     setTimeout(() => {
       if (!showMegaMenu) {
         setMegaMenuData(null);
       }
     }, 100);
+  };
+
+  const handleAISourcingHover = () => {
+    // Close Categories menu if open
+    setShowMegaMenu(false);
+    setMegaMenuData(null);
+    
+    setShowAISourcingMenu(true);
+  };
+
+  const handleAISourcingLeave = () => {
+    setShowAISourcingMenu(false);
   };
 
   useEffect(() => {
@@ -81,7 +99,7 @@ const TrasparentHeader = () => {
         </div>
       </div>
          {!scrolled && (
-        <div className="header_extras">
+        <div className="header_extras" onMouseLeave={handleMegaMenuLeave}>
           <div className="header_extras-left">
             <div className="ic_nest" title="All Categories">
               <Menu className="header_extras_ic" size={22} />
@@ -98,19 +116,27 @@ const TrasparentHeader = () => {
             </div>
           </div>
           <div className="header_extras-right">
-            <p className="header_extras_link">AI sourcing agent</p>
+            <p 
+              className={`header_extras_link mega-menu-trigger ${
+                showAISourcingMenu ? 'active' : ''
+              }`}
+              onMouseEnter={handleAISourcingHover}
+            >
+              AI sourcing agent
+            </p>
             <p className="header_extras_link">Help center</p>
             <p className="header_extras_link">More from Sumic</p>
             <p className="header_extras_link">Become a supplier</p>
           </div>
           
-          {/* Mega Menu */}
-          <Fragment onMouseLeave={handleMegaMenuLeave}>
-            <MegaMenu 
-              isVisible={showMegaMenu && !scrolled} 
-              megaMenuData={megaMenuData}
-            />
-          </Fragment>
+          {/* Mega Menus */}
+          <CategoriesMegaMenu 
+            isVisible={showMegaMenu && !scrolled} 
+            megaMenuData={megaMenuData}
+          />
+          
+          {/* AI Sourcing Mega Menu */}
+          <AISourcingMegaMenu isVisible={showAISourcingMenu && !scrolled} />
         </div>
       )}
    

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import product_0 from '../../media/products/product_0.jpg';
-import product_1 from '../../media/products/product_1.jpg';
-import product_2 from '../../media/products/product_2.jpg';
-import product_3 from '../../media/products/product_3.jpg';
-import product_4 from '../../media/products/product_4.jpg';
-import "./mega_menu.css"
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
+import "../mega_menu.css"
 
-const MegaMenu = ({ isVisible, megaMenuData }) => {
+const CategoriesMegaMenu = ({ isVisible, megaMenuData }) => {
   if (!isVisible || !megaMenuData) return null;
 
   const { categories, featuredProducts } = megaMenuData;
@@ -187,4 +187,4 @@ export const getAllCategoriesMegaMenuData = () => ({
   ]
 });
 
-export default MegaMenu;
+export default CategoriesMegaMenu;
