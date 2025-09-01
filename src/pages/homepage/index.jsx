@@ -19,6 +19,7 @@ import Discover from './components/Discover';
 import FromFactory from './components/FromFactory.jsx';
 import Footer from '../../components/Footer';
 import MarketplaceSection from '../../components/ui/MarketplaceSection';
+import ProductGrid from '../../components/ui/ProductGrid';
 
 const Homepage = () => {
   return (
@@ -35,9 +36,10 @@ const Homepage = () => {
 <Discover/>
 {/* main content */}
       <MarketplaceSection />
-
-      {/* extras */}
-
+      
+      {/* Products Section */}
+      <ProductGrid />
+      {/* products go here */}
 <FromFactory/>
 <Footer />
     </div>

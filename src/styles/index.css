@@ -10,3 +10,8 @@ body {
   font-family: inherit;
   margin: unset;
 }
+
+
+.sm-text{
+  font-size: .8rem;
+}
