@@ -6,6 +6,11 @@ import CategorySidebar from './components/CategorySidebar';
 import ProductToolbar from './components/ProductToolbar';
 import ProductGrid from './components/ProductGrid';
 import SavedSearches from './components/SavedSearches';
+import product_0 from '../../media/products/product_0.jpg';
+import product_1 from '../../media/products/product_1.jpg';
+import product_2 from '../../media/products/product_2.jpg';
+import product_3 from '../../media/products/product_3.jpg';
+import product_4 from '../../media/products/product_4.jpg';
 
 
 const ProductCatalog = () => {
@@ -35,7 +40,7 @@ const ProductCatalog = () => {
       id: '1',
       name: 'Professional Fitness Equipment Set - Commercial Grade Dumbbells',
       description: 'High-quality commercial grade dumbbells perfect for gyms and fitness centers. Durable construction with anti-slip grip.',
-      image: 'https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg',
+      image: product_0,
       priceRange: { min: 45, max: 120 },
       moq: 50,
       supplier: {
@@ -54,7 +59,7 @@ const ProductCatalog = () => {
       id: '2',
       name: 'Wireless Bluetooth Headphones - Premium Audio Quality',
       description: 'Premium wireless headphones with noise cancellation and 30-hour battery life. Perfect for retail and wholesale.',
-      image: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg',
+      image: product_1,
       priceRange: { min: 25, max: 85 },
       moq: 100,
       supplier: {
@@ -73,7 +78,7 @@ const ProductCatalog = () => {
       id: '3',
       name: 'Industrial Packaging Machine - Automatic Sealing System',
       description: 'Fully automatic packaging machine for industrial use. High-speed sealing with precision control systems.',
-      image: 'https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg',
+      image: product_2,
       priceRange: { min: 15000, max: 45000 },
       moq: 1,
       supplier: {
@@ -92,7 +97,7 @@ const ProductCatalog = () => {
       id: '4',
       name: 'Organic Skincare Products - Natural Beauty Line',
       description: 'Premium organic skincare products made with natural ingredients. Perfect for beauty retailers and spas.',
-      image: 'https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg',
+      image: product_3,
       priceRange: { min: 12, max: 35 },
       moq: 200,
       supplier: {
@@ -111,7 +116,7 @@ const ProductCatalog = () => {
       id: '5',
       name: 'Smart Home Security Camera System - 4K Resolution',
       description: '4K security camera system with AI detection and cloud storage. Ideal for residential and commercial use.',
-      image: 'https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg',
+      image: product_4,
       priceRange: { min: 150, max: 400 },
       moq: 25,
       supplier: {
@@ -130,7 +135,7 @@ const ProductCatalog = () => {
       id: '6',
       name: 'Premium Cotton Fabric - Wholesale Textile Materials',
       description: 'High-quality cotton fabric suitable for clothing manufacturing. Available in various colors and patterns.',
-      image: 'https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg',
+      image: product_0,
       priceRange: { min: 8, max: 25 },
       moq: 500,
       supplier: {
@@ -149,7 +154,7 @@ const ProductCatalog = () => {
       id: '7',
       name: 'LED Lighting Solutions - Energy Efficient Bulbs',
       description: 'Energy-efficient LED bulbs for commercial and residential use. Long-lasting with excellent light quality.',
-      image: 'https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg',
+      image: product_1,
       priceRange: { min: 3, max: 15 },
       moq: 1000,
       supplier: {
@@ -168,7 +173,7 @@ const ProductCatalog = () => {
       id: '8',
       name: 'Stainless Steel Kitchen Equipment - Commercial Grade',
       description: 'Professional stainless steel kitchen equipment for restaurants and commercial kitchens. Durable and hygienic.',
-      image: 'https://images.pexels.com/photos/2291367/pexels-photo-2291367.jpeg',
+      image: product_2,
       priceRange: { min: 200, max: 800 },
       moq: 10,
       supplier: {

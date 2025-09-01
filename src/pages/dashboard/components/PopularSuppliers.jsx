@@ -2,13 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
 
 const PopularSuppliers = () => {
   const suppliers = [
     {
       id: 1,
       name: "Global Tech Solutions",
-      logo: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      logo: product_0,
       location: "Guangzhou, China",
       rating: 4.9,
       orders: 15420,
@@ -20,7 +25,7 @@ const PopularSuppliers = () => {
     {
       id: 2,
       name: "Industrial Machinery Corp",
-      logo: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg",
+      logo: product_1,
       location: "Mumbai, India",
       rating: 4.8,
       orders: 12350,
@@ -32,7 +37,7 @@ const PopularSuppliers = () => {
     {
       id: 3,
       name: "Premium Materials Ltd",
-      logo: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
+      logo: product_2,
       location: "Istanbul, Turkey",
       rating: 4.7,
       orders: 9870,
@@ -44,7 +49,7 @@ const PopularSuppliers = () => {
     {
       id: 4,
       name: "Safety First Equipment",
-      logo: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      logo: product_3,
       location: "São Paulo, Brazil",
       rating: 4.6,
       orders: 8540,
@@ -56,7 +61,7 @@ const PopularSuppliers = () => {
     {
       id: 5,
       name: "Packaging Solutions Pro",
-      logo: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg",
+      logo: product_4,
       location: "Bangkok, Thailand",
       rating: 4.5,
       orders: 7230,

@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
 
 const TrendingProducts = () => {
   const products = [
     {
       id: 1,
       name: "Industrial CNC Machine",
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+      image: product_0,
       price: "$45,000 - $65,000",
       moq: "1 unit",
       supplier: "Precision Manufacturing Co.",
@@ -20,7 +24,7 @@ const TrendingProducts = () => {
     {
       id: 2,
       name: "LED Display Modules",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_1,
       price: "$25 - $45",
       moq: "100 pieces",
       supplier: "TechComponents Ltd.",
@@ -31,7 +35,7 @@ const TrendingProducts = () => {
     {
       id: 3,
       name: "Stainless Steel Sheets",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
+      image: product_2,
       price: "$1,200 - $1,800",
       moq: "5 tons",
       supplier: "MetalWorks Industries",
@@ -42,7 +46,7 @@ const TrendingProducts = () => {
     {
       id: 4,
       name: "Safety Helmets",
-      image: "https://images.pexels.com/photos/4226881/pexels-photo-4226881.jpeg",
+      image: product_3,
       price: "$15 - $25",
       moq: "50 pieces",
       supplier: "SafeGuard Equipment",

@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
 
 const FastCustomization = () => {
   const customizableProducts = [
     {
       id: 1,
       name: "Custom Printed T-Shirts",
-      image: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg",
+      image: product_0,
       moq: "50 pieces",
       price: "$8 - $15",
       customizationTime: "7-10 days",
@@ -20,7 +24,7 @@ const FastCustomization = () => {
     {
       id: 2,
       name: "Branded USB Drives",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_1,
       moq: "100 pieces",
       price: "$5 - $12",
       customizationTime: "5-7 days",
@@ -31,7 +35,7 @@ const FastCustomization = () => {
     {
       id: 3,
       name: "Custom Packaging Boxes",
-      image: "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg",
+      image: product_2,
       moq: "500 pieces",
       price: "$0.80 - $3.50",
       customizationTime: "10-15 days",
@@ -42,7 +46,7 @@ const FastCustomization = () => {
     {
       id: 4,
       name: "Promotional Mugs",
-      image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg",
+      image: product_3,
       moq: "100 pieces",
       price: "$3 - $8",
       customizationTime: "7-12 days",
@@ -136,7 +140,7 @@ const FastCustomization = () => {
               </div>
             </div>
           </div>
-        ))}
+        ))};
       </div>
     </div>
   );

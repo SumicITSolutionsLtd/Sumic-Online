@@ -2,13 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
 
 const ProductCatalog = () => {
   const products = [
     {
       id: 1,
       name: "High-Performance LED Displays",
-      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg",
+      image: product_0,
       price: "US$27-49.02",
       supplier: "Display Tech Solutions",
       location: "Shenzhen, China",
@@ -19,7 +24,7 @@ const ProductCatalog = () => {
     {
       id: 2,
       name: "Industrial Control Systems",
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+      image: product_1,
       price: "US$665.50",
       supplier: "Control Systems Ltd.",
       location: "Shanghai, China",
@@ -30,7 +35,7 @@ const ProductCatalog = () => {
     {
       id: 3,
       name: "Premium Electronic Components",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_2,
       price: "US$1.70",
       supplier: "ElectroTech Manufacturing",
       location: "Guangzhou, China",
@@ -41,7 +46,7 @@ const ProductCatalog = () => {
     {
       id: 4,
       name: "Smart Wearable Technology",
-      image: "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg",
+      image: product_3,
       price: "US$0.33",
       supplier: "Wearable Innovations Co.",
       location: "Beijing, China",
@@ -52,7 +57,7 @@ const ProductCatalog = () => {
     {
       id: 5,
       name: "Fashion Accessories Collection",
-      image: "https://images.pexels.com/photos/934063/pexels-photo-934063.jpeg",
+      image: product_4,
       price: "US$0.02",
       supplier: "Fashion Forward Ltd.",
       location: "Hong Kong",
@@ -63,7 +68,7 @@ const ProductCatalog = () => {
     {
       id: 6,
       name: "Safety Equipment Solutions",
-      image: "https://images.pexels.com/photos/4226881/pexels-photo-4226881.jpeg",
+      image: product_0,
       price: "US$400",
       supplier: "SafetyFirst Manufacturing",
       location: "Tianjin, China",
@@ -74,7 +79,7 @@ const ProductCatalog = () => {
     {
       id: 7,
       name: "Construction Materials",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
+      image: product_1,
       price: "US$29.99",
       supplier: "BuildRight Materials",
       location: "Wuhan, China",
@@ -85,7 +90,7 @@ const ProductCatalog = () => {
     {
       id: 8,
       name: "Packaging Solutions",
-      image: "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg",
+      image: product_2,
       price: "US$3.41-3.99",
       supplier: "PackPro Industries",
       location: "Suzhou, China",

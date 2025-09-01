@@ -2,13 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
 
 const FrequentlySearched = () => {
   const searchedItems = [
     {
       id: 1,
       name: "Smart Watches",
-      image: "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg",
+      image: product_0,
       searchCount: 2850,
       priceRange: "US$65.80",
       category: "Electronics"
@@ -16,7 +21,7 @@ const FrequentlySearched = () => {
     {
       id: 2,
       name: "Apple Products",
-      image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg",
+      image: product_1,
       searchCount: 1950,
       priceRange: "US$400",
       category: "Electronics"
@@ -24,7 +29,7 @@ const FrequentlySearched = () => {
     {
       id: 3,
       name: "Industrial Equipment",
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+      image: product_2,
       searchCount: 1680,
       priceRange: "US$19.70",
       category: "Machinery"
@@ -32,7 +37,7 @@ const FrequentlySearched = () => {
     {
       id: 4,
       name: "Fashion Accessories",
-      image: "https://images.pexels.com/photos/934063/pexels-photo-934063.jpeg",
+      image: product_3,
       searchCount: 1420,
       priceRange: "US$4",
       category: "Fashion"
@@ -40,7 +45,7 @@ const FrequentlySearched = () => {
     {
       id: 5,
       name: "Safety Equipment",
-      image: "https://images.pexels.com/photos/4226881/pexels-photo-4226881.jpeg",
+      image: product_4,
       searchCount: 1290,
       priceRange: "US$0.70",
       category: "Safety"
@@ -48,7 +53,7 @@ const FrequentlySearched = () => {
     {
       id: 6,
       name: "Electronics Components",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_0,
       searchCount: 1150,
       priceRange: "US$18.60",
       category: "Electronics"

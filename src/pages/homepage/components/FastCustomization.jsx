@@ -2,13 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
 
 const FastCustomization = () => {
   const customProducts = [
     {
       id: 1,
       name: "Custom Electronic Components",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_0,
       price: "US$65.80",
       moq: "100 pieces",
       leadTime: "7-15 days",
@@ -17,7 +22,7 @@ const FastCustomization = () => {
     {
       id: 2,
       name: "Branded Packaging Solutions",
-      image: "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg",
+      image: product_1,
       price: "US$19.70",
       moq: "500 pieces",
       leadTime: "5-10 days",
@@ -26,7 +31,7 @@ const FastCustomization = () => {
     {
       id: 3,
       name: "Custom Promotional Items",
-      image: "https://images.pexels.com/photos/934063/pexels-photo-934063.jpeg",
+      image: product_2,
       price: "US$4",
       moq: "200 pieces",
       leadTime: "10-20 days",
@@ -35,7 +40,7 @@ const FastCustomization = () => {
     {
       id: 4,
       name: "Industrial Safety Gear",
-      image: "https://images.pexels.com/photos/4226881/pexels-photo-4226881.jpeg",
+      image: product_3,
       price: "US$0.70",
       moq: "1000 pieces",
       leadTime: "3-7 days",
@@ -44,7 +49,7 @@ const FastCustomization = () => {
     {
       id: 5,
       name: "Smart Device Accessories",
-      image: "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg",
+      image: product_4,
       price: "US$18.60",
       moq: "50 pieces",
       leadTime: "7-14 days",

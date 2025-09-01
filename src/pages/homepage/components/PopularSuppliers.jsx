@@ -2,13 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
 
 const PopularSuppliers = () => {
   const suppliers = [
     {
       id: 1,
       name: "Global Manufacturing Co.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      image: product_0,
       rating: 4.8,
       reviewCount: 2450,
       location: "Shanghai, China",
@@ -18,7 +22,7 @@ const PopularSuppliers = () => {
     {
       id: 2,
       name: "Premium Electronics Ltd.",
-      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+      image: product_1,
       rating: 4.9,
       reviewCount: 1890,
       location: "Shenzhen, China",
@@ -28,7 +32,7 @@ const PopularSuppliers = () => {
     {
       id: 3,
       name: "Industrial Solutions Inc.",
-      image: "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg",
+      image: product_2,
       rating: 4.7,
       reviewCount: 3200,
       location: "Guangzhou, China",
@@ -38,7 +42,7 @@ const PopularSuppliers = () => {
     {
       id: 4,
       name: "Quality Goods Supplier",
-      image: "https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg",
+      image: product_3,
       rating: 4.6,
       reviewCount: 1650,
       location: "Hangzhou, China",

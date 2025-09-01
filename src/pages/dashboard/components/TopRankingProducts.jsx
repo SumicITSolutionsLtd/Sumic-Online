@@ -2,13 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
 
 const TopRankingProducts = () => {
   const topProducts = [
     {
       id: 1,
       name: "Wireless Bluetooth Headphones",
-      image: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg",
+      image: product_0,
       price: "$15 - $35",
       moq: "50 pieces",
       supplier: "AudioTech Manufacturing",
@@ -21,7 +26,7 @@ const TopRankingProducts = () => {
     {
       id: 2,
       name: "Stainless Steel Water Bottles",
-      image: "https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg",
+      image: product_1,
       price: "$8 - $18",
       moq: "100 pieces",
       supplier: "EcoBottle Solutions",
@@ -34,7 +39,7 @@ const TopRankingProducts = () => {
     {
       id: 3,
       name: "LED Desk Lamps",
-      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg",
+      image: product_2,
       price: "$12 - $28",
       moq: "50 pieces",
       supplier: "LightTech Industries",
@@ -47,7 +52,7 @@ const TopRankingProducts = () => {
     {
       id: 4,
       name: "Eco-Friendly Tote Bags",
-      image: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg",
+      image: product_3,
       price: "$3 - $12",
       moq: "200 pieces",
       supplier: "GreenBag Co",
@@ -60,7 +65,7 @@ const TopRankingProducts = () => {
     {
       id: 5,
       name: "Portable Phone Chargers",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_4,
       price: "$10 - $25",
       moq: "100 pieces",
       supplier: "PowerTech Solutions",

@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
 
 const NewArrivals = () => {
   const newProducts = [
     {
       id: 1,
       name: "Smart Fitness Tracker",
-      image: "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg",
+      image: product_0,
       price: "$25 - $45",
       moq: "50 pieces",
       supplier: "HealthTech Innovations",
@@ -22,7 +27,7 @@ const NewArrivals = () => {
     {
       id: 2,
       name: "Bamboo Kitchen Utensil Set",
-      image: "https://images.pexels.com/photos/1143754/pexels-photo-1143754.jpeg",
+      image: product_1,
       price: "$8 - $18",
       moq: "100 pieces",
       supplier: "EcoKitchen Solutions",
@@ -35,7 +40,7 @@ const NewArrivals = () => {
     {
       id: 3,
       name: "Wireless Car Charger",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_2,
       price: "$15 - $30",
       moq: "50 pieces",
       supplier: "AutoTech Pro",
@@ -48,7 +53,7 @@ const NewArrivals = () => {
     {
       id: 4,
       name: "Ergonomic Office Chair",
-      image: "https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg",
+      image: product_3,
       price: "$120 - $250",
       moq: "10 pieces",
       supplier: "ComfortSeating Ltd",
@@ -61,7 +66,7 @@ const NewArrivals = () => {
     {
       id: 5,
       name: "Solar Power Bank",
-      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg",
+      image: product_4,
       price: "$20 - $40",
       moq: "100 pieces",
       supplier: "GreenEnergy Tech",
@@ -74,7 +79,7 @@ const NewArrivals = () => {
     {
       id: 6,
       name: "Stainless Steel Lunch Box",
-      image: "https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg",
+      image: product_0,
       price: "$12 - $25",
       moq: "100 pieces",
       supplier: "MealPrep Solutions",

@@ -1,6 +1,8 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
 
 const PlatformBenefits = () => {
   const benefits = [
@@ -31,14 +33,14 @@ const PlatformBenefits = () => {
       company: 'TechManufacturing Co.',
       industry: 'Electronics',
       achievement: '300% increase in international orders',
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop',
+      image: product_0,
       quote: `"GreenTrade B2B helped us expand globally and connect with quality suppliers we never would have found otherwise."`
     },
     {
       company: 'EcoTextiles Ltd.',
       industry: 'Textiles',
       achievement: 'Reduced sourcing costs by 40%',
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?w=400&h=300&fit=crop',
+      image: product_1,
       quote: `"The platform's verification system gave us confidence in our supplier relationships and improved our supply chain efficiency."`
     }
   ];

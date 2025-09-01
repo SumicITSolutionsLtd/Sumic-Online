@@ -7,6 +7,11 @@ import ProductInfo from './components/ProductInfo';
 import ProductTabs from './components/ProductTabs';
 import RelatedProducts from './components/RelatedProducts';
 import StickyActionBar from './components/StickyActionBar';
+import product_0 from '../../media/products/product_0.jpg';
+import product_1 from '../../media/products/product_1.jpg';
+import product_2 from '../../media/products/product_2.jpg';
+import product_3 from '../../media/products/product_3.jpg';
+import product_4 from '../../media/products/product_4.jpg';
 
 const ProductDetail = () => {
   const [searchParams] = useSearchParams();
@@ -19,10 +24,10 @@ const ProductDetail = () => {
     name: "Industrial Grade Stainless Steel Pipe Fittings",
     model: "SS316L-PF-001",
     images: [
-      "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg",
-      "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
-      "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg",
-      "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg"
+      product_0,
+      product_1,
+      product_2,
+      product_3
     ],
     badges: ["Trade Assurance", "Verified Supplier", "Quality Assured"],
     priceTiers: [
@@ -49,7 +54,7 @@ const ProductDetail = () => {
   const supplier = {
     name: "Shanghai Precision Manufacturing Co., Ltd.",
     location: "Shanghai, China",
-    logo: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    logo: product_4,
     rating: 4.7,
     reviewCount: 1247,
     yearsInBusiness: "15+",
@@ -106,7 +111,7 @@ const ProductDetail = () => {
       rating: 4.5,
       reviewCount: 892,
       location: "Guangzhou, China",
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+      image: product_0,
       isNew: false
     },
     {
@@ -117,7 +122,7 @@ const ProductDetail = () => {
       rating: 4.7,
       reviewCount: 654,
       location: "Shanghai, China",
-      image: "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg",
+      image: product_1,
       isNew: true
     },
     {
@@ -128,7 +133,7 @@ const ProductDetail = () => {
       rating: 4.8,
       reviewCount: 423,
       location: "Beijing, China", 
-      image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg",
+      image: product_2,
       isNew: false
     },
     {
@@ -139,7 +144,7 @@ const ProductDetail = () => {
       rating: 4.4,
       reviewCount: 756,
       location: "Shenzhen, China",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
+      image: product_3,
       isNew: false
     }
   ];

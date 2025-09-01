@@ -2,13 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
+import product_4 from '../../../media/products/product_4.jpg';
 
 const TopRankingProducts = () => {
   const topProducts = [
     {
       id: 1,
       name: "Professional LED Display",
-      image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg",
+      image: product_0,
       price: "US$29.99",
       originalPrice: "US$39.99",
       discount: 25,
@@ -20,7 +25,7 @@ const TopRankingProducts = () => {
     {
       id: 2,
       name: "Industrial Control System",
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+      image: product_1,
       price: "US$665.50",
       originalPrice: "US$750.00",
       discount: 11,
@@ -32,7 +37,7 @@ const TopRankingProducts = () => {
     {
       id: 3,
       name: "Smart Home Devices",
-      image: "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg",
+      image: product_2,
       price: "US$3.41-3.99",
       originalPrice: null,
       discount: 0,
@@ -44,7 +49,7 @@ const TopRankingProducts = () => {
     {
       id: 4,
       name: "Premium Fashion Accessories",
-      image: "https://images.pexels.com/photos/934063/pexels-photo-934063.jpeg",
+      image: product_3,
       price: "US$1.30-1.60",
       originalPrice: null,
       discount: 0,
@@ -56,7 +61,7 @@ const TopRankingProducts = () => {
     {
       id: 5,
       name: "Construction Materials",
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
+      image: product_4,
       price: "US$27-49.02",
       originalPrice: null,
       discount: 0,
@@ -68,7 +73,7 @@ const TopRankingProducts = () => {
     {
       id: 6,
       name: "Electronic Components",
-      image: "https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg",
+      image: product_0,
       price: "US$1.70",
       originalPrice: "US$2.20",
       discount: 23,

@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
+import product_2 from '../../../media/products/product_2.jpg';
+import product_3 from '../../../media/products/product_3.jpg';
 
 const PreferredSuppliers = () => {
   const suppliers = [
     {
       id: 1,
       name: "Precision Manufacturing Co.",
-      logo: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      logo: product_0,
       location: "Shanghai, China",
       rating: 4.8,
       responseTime: "< 2 hours",
@@ -21,7 +25,7 @@ const PreferredSuppliers = () => {
     {
       id: 2,
       name: "TechComponents Ltd.",
-      logo: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg",
+      logo: product_1,
       location: "Shenzhen, China",
       rating: 4.6,
       responseTime: "< 4 hours",
@@ -33,7 +37,7 @@ const PreferredSuppliers = () => {
     {
       id: 3,
       name: "MetalWorks Industries",
-      logo: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
+      logo: product_2,
       location: "Mumbai, India",
       rating: 4.7,
       responseTime: "< 6 hours",
@@ -45,7 +49,7 @@ const PreferredSuppliers = () => {
     {
       id: 4,
       name: "SafeGuard Equipment",
-      logo: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+      logo: product_3,
       location: "Istanbul, Turkey",
       rating: 4.5,
       responseTime: "< 8 hours",
