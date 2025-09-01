@@ -1,8 +1,9 @@
-  import React, { useState, useEffect } from "react"; // add useState import
+import React, { useState, useEffect, Fragment } from "react"; // add useState import
 import "../../styles/header.css";
 import Logo from "../../media/logo.png";
 import DarkLogo from "../../media/dark_logo.png";
 import { Link } from "react-router-dom";
+import MegaMenu, { getAllCategoriesMegaMenuData } from './MegaMenu';
 import {
   ShoppingCart,
   Menu,
@@ -13,9 +14,26 @@ import {
 } from "lucide-react";
 
 const TrasparentHeader = () => {
-
-
   const [scrolled, setScrolled] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [megaMenuData, setMegaMenuData] = useState(null);
+
+  const handleAllCategoriesHover = () => {
+    if (!showMegaMenu) {
+      setMegaMenuData(getAllCategoriesMegaMenuData());
+      setShowMegaMenu(true);
+    }
+  };
+
+  const handleMegaMenuLeave = () => {
+    setShowMegaMenu(false);
+    // Delay clearing data to prevent flicker
+    setTimeout(() => {
+      if (!showMegaMenu) {
+        setMegaMenuData(null);
+      }
+    }, 100);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,9 +83,16 @@ const TrasparentHeader = () => {
          {!scrolled && (
         <div className="header_extras">
           <div className="header_extras-left">
-            <div className="ic_nest" title="Login">
+            <div className="ic_nest" title="All Categories">
               <Menu className="header_extras_ic" size={22} />
-              <p className="header_extras_link">All Categories</p>
+              <p 
+                className={`header_extras_link mega-menu-trigger ${
+                  showMegaMenu ? 'active' : ''
+                }`}
+                onMouseEnter={handleAllCategoriesHover}
+              >
+                All Categories
+              </p>
               <p className="header_extras_link">Featured selections</p>
               <p className="header_extras_link">Order protection</p>
             </div>
@@ -78,6 +103,14 @@ const TrasparentHeader = () => {
             <p className="header_extras_link">More from Sumic</p>
             <p className="header_extras_link">Become a supplier</p>
           </div>
+          
+          {/* Mega Menu */}
+          <Fragment onMouseLeave={handleMegaMenuLeave}>
+            <MegaMenu 
+              isVisible={showMegaMenu && !scrolled} 
+              megaMenuData={megaMenuData}
+            />
+          </Fragment>
         </div>
       )}
    
