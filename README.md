@@ -20,8 +20,9 @@ react_app/
 
 ## FYI Adding Routes
 
-To add new routes, update the `Routes.jsx` file:
-
+- issue with adding new routes
+- solution: add new routes to the `Routes.jsx` file
+- add new route to the `ProjectRoutes` function
 ```jsx
 import { useRoutes } from "react-router-dom";
 import HomePage from "pages/HomePage";
@@ -37,11 +38,3 @@ const ProjectRoutes = () => {
   return element;
 };
 ```
-
-
-## Acknowledgments
-
-- Built by [kalanxi Dixon](https://mdixon.vercel.app/)
-- Powered by Vite
-
-Built with ❤️ by mdixon
