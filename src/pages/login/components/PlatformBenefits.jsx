@@ -45,7 +45,7 @@ const PlatformBenefits = () => {
     <div className="bg-card rounded-lg p-6 shadow-card">
       <div className="text-center mb-6">
         <h2 className="text-xl font-semibold text-foreground mb-2">
-          Why Choose GreenTrade B2B?
+          Why Choose sumic-online?
         </h2>
         <p className="text-muted-foreground">
           Join thousands of businesses already growing with our platform

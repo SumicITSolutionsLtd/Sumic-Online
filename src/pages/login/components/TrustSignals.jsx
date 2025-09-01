@@ -1,6 +1,8 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
+import product_0 from '../../../media/products/product_0.jpg';
+import product_1 from '../../../media/products/product_1.jpg';
 
 const TrustSignals = () => {
   const securityFeatures = [
@@ -26,12 +28,13 @@ const TrustSignals = () => {
       name: 'Sarah Chen',
       company: 'Global Manufacturing Ltd.',
       role: 'Procurement Director',
-      content: `GreenTrade B2B has streamlined our supplier sourcing process. We've reduced procurement time by 40% and found reliable partners worldwide.`,avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face'
+      content: `sumic-online has streamlined our supplier sourcing process. We've reduced procurement time by 40% and found reliable partners worldwide.`,
+      avatar: product_0
     },
     {
       name: 'Michael Rodriguez',company: 'TechComponents Inc.',role: 'Supply Chain Manager',
-      content: `The platform's verification system gives us confidence in new suppliers. We've expanded our vendor network significantly through GreenTrade.`,
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face'
+      content: `The platform's verification system gives us confidence in new suppliers. We've expanded our vendor network significantly through sumic-online.`,
+      avatar: product_1
     }
   ];
 

@@ -4,13 +4,14 @@ import LoginHeader from './components/LoginHeader';
 import LoginForm from './components/LoginForm';
 import TrustSignals from './components/TrustSignals';
 import PlatformBenefits from './components/PlatformBenefits';
+import logo from '../../media/logo.png';
 
 const LoginPage = () => {
   return (
     <>
       <Helmet>
-        <title>Sign In - GreenTrade B2B | Secure Business Login</title>
-        <meta name="description" content="Sign in to your GreenTrade B2B account to access verified suppliers, secure payments, and global trade opportunities." />
+        <title>Sign In - sumic-online | Secure Business Login</title>
+        <meta name="description" content="Sign in to your sumic-online account to access verified suppliers, secure payments, and global trade opportunities." />
         <meta name="keywords" content="B2B login, business account, supplier access, secure signin" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-primary/10">
@@ -47,10 +48,7 @@ const LoginPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-6 h-6 bg-primary rounded flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">GT</span>
-                  </div>
-                  <span className="font-semibold text-foreground">GreenTrade B2B</span>
+                  <img src={logo} alt="sumic-online" className="h-8 w-auto" />
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
                   The world's leading B2B marketplace connecting businesses with verified suppliers globally.
@@ -94,7 +92,7 @@ const LoginPage = () => {
             
             <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
               <p className="text-xs text-muted-foreground">
-                © {new Date()?.getFullYear()} GreenTrade B2B. All rights reserved.
+                © {new Date()?.getFullYear()} sumic-online. All rights reserved.
               </p>
               <div className="flex items-center space-x-4 mt-4 sm:mt-0">
                 <span className="text-xs text-muted-foreground">Follow us:</span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
+import logo from '../../../media/logo.png';
 
 const LoginHeader = () => {
   return (
@@ -10,12 +11,7 @@ const LoginHeader = () => {
           {/* Logo Section */}
           <div className="flex items-center">
             <Link to="/dashboard" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Icon name="Leaf" size={20} color="white" />
-              </div>
-              <span className="text-xl font-semibold text-foreground">
-                GreenTrade B2B
-              </span>
+              <img src={logo} alt="sumic-online" className="h-8 w-auto" />
             </Link>
           </div>
 

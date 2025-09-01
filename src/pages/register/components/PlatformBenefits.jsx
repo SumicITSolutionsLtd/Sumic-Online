@@ -34,7 +34,7 @@ const PlatformBenefits = () => {
       industry: 'Electronics',
       achievement: '300% increase in international orders',
       image: product_0,
-      quote: `"GreenTrade B2B helped us expand globally and connect with quality suppliers we never would have found otherwise."`
+      quote: `"sumic-online helped us expand globally and connect with quality suppliers we never would have found otherwise."`
     },
     {
       company: 'EcoTextiles Ltd.',
@@ -73,7 +73,7 @@ const PlatformBenefits = () => {
       {/* Platform Benefits */}
       <div className="bg-card border border-border rounded-lg p-6">
         <h3 className="text-lg font-semibold text-foreground mb-4">
-          Why Choose GreenTrade B2B?
+          Why Choose sumic-online?
         </h3>
         <div className="space-y-4">
           {benefits?.map((benefit, index) => (
@@ -163,7 +163,7 @@ const PlatformBenefits = () => {
               Our support team is available 24/7 to assist you
             </p>
             <p className="text-xs text-primary font-medium mt-1">
-              support@greentradeb2b.com
+              support@sumic-online.com
             </p>
           </div>
         </div>

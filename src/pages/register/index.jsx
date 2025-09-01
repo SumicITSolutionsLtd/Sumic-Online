@@ -8,6 +8,7 @@ import BusinessInfoStep from './components/BusinessInfoStep';
 import CompanyProfileStep from './components/CompanyProfileStep';
 import VerificationStep from './components/VerificationStep';
 import PlatformBenefits from './components/PlatformBenefits';
+import logo from '../../media/logo.png';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -178,8 +179,8 @@ const Register = () => {
   return (
     <>
       <Helmet>
-        <title>Business Registration - GreenTrade B2B</title>
-        <meta name="description" content="Register your business on GreenTrade B2B marketplace. Connect with global suppliers and buyers for your B2B trading needs." />
+        <title>Business Registration - sumic-online</title>
+        <meta name="description" content="Register your business on sumic-online marketplace. Connect with global suppliers and buyers for your B2B trading needs." />
       </Helmet>
       <div className="min-h-screen bg-background">
         {/* Simplified Header */}
@@ -187,12 +188,7 @@ const Register = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <Link to="/dashboard" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <Icon name="Leaf" size={20} color="white" />
-                </div>
-                <span className="text-xl font-semibold text-foreground">
-                  GreenTrade B2B
-                </span>
+                <img src={logo} alt="sumic-online" className="h-8 w-auto" />
               </Link>
               
               <div className="flex items-center space-x-4">
@@ -271,7 +267,7 @@ const Register = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="text-center">
               <p className="text-sm text-muted-foreground">
-                © {new Date()?.getFullYear()} GreenTrade B2B. All rights reserved.
+                © {new Date()?.getFullYear()} sumic-online. All rights reserved.
               </p>
               <div className="flex items-center justify-center space-x-6 mt-4">
                 <Link to="/terms" className="text-xs text-muted-foreground hover:text-foreground transition-smooth">

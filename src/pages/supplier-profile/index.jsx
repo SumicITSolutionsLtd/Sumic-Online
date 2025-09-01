@@ -1,10 +1,15 @@
 import React from 'react';
-import Header from '../../components/ui/Header';
+import Header from '../../components/Header';
 import BreadcrumbNavigation from '../../components/ui/BreadcrumbNavigation';
 import SupplierHeader from './components/SupplierHeader';
 import SupplierTabs from './components/SupplierTabs';
 import ContactSidebar from './components/ContactSidebar';
 import CustomerReviews from './components/CustomerReviews';
+import product_0 from '../../media/products/product_0.jpg';
+import product_1 from '../../media/products/product_1.jpg';
+import product_2 from '../../media/products/product_2.jpg';
+import product_3 from '../../media/products/product_3.jpg';
+import product_4 from '../../media/products/product_4.jpg';
 
 const SupplierProfile = () => {
   // Mock supplier data
@@ -16,8 +21,8 @@ const SupplierProfile = () => {
     responseRate: "98%",
     rating: 4.7,
     reviewCount: 1247,
-    bannerImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=400&fit=crop",
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=200&fit=crop",
+    bannerImage: product_0,
+    logo: product_1,
     verifications: ["Business License", "ISO 9001", "Trade Assurance"],
     description: `TechnoMax Manufacturing is a leading supplier of electronic components and industrial equipment with over 15 years of experience in the global market. We specialize in providing high-quality products to businesses worldwide, with a focus on innovation, reliability, and customer satisfaction.\n\nOur state-of-the-art manufacturing facilities are equipped with the latest technology and operated by skilled professionals who ensure every product meets international quality standards. We have successfully served over 5,000 clients across 80+ countries.`,
     additionalInfo: "Our commitment to excellence has earned us numerous industry certifications and recognition as a trusted partner for businesses seeking reliable suppliers. We continuously invest in research and development to stay ahead of market trends and provide cutting-edge solutions to our clients.",
@@ -28,9 +33,9 @@ const SupplierProfile = () => {
       { name: "FCC Certification", issuer: "UL", validUntil: "Sep 2025" }
     ],
     facilityPhotos: [
-      { url: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&h=300&fit=crop", caption: "Main Production Floor" },
-      { url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop", caption: "Quality Control Lab" },
-      { url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=300&fit=crop", caption: "Warehouse & Storage" }
+      { url: product_2, caption: "Main Production Floor" },
+      { url: product_3, caption: "Quality Control Lab" },
+      { url: product_4, caption: "Warehouse & Storage" }
     ],
     statistics: [
       { value: "15+", label: "Years Experience" },
@@ -45,7 +50,7 @@ const SupplierProfile = () => {
         price: "$245.00 - $389.00",
         moq: "50 pieces",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=300&h=300&fit=crop",
+        image: product_0,
         category: "electronics"
       },
       {
@@ -54,7 +59,7 @@ const SupplierProfile = () => {
         price: "$1,250.00 - $2,100.00",
         moq: "10 pieces",
         rating: 4.9,
-        image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=300&h=300&fit=crop",
+        image: product_1,
         category: "machinery"
       },
       {
@@ -63,7 +68,7 @@ const SupplierProfile = () => {
         price: "$89.00 - $156.00",
         moq: "100 pieces",
         rating: 4.6,
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=300&fit=crop",
+        image: product_2,
         category: "components"
       },
       {
@@ -72,7 +77,7 @@ const SupplierProfile = () => {
         price: "$45.00 - $78.00",
         moq: "200 pieces",
         rating: 4.7,
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop",
+        image: product_3,
         category: "electronics"
       },
       {
@@ -81,7 +86,7 @@ const SupplierProfile = () => {
         price: "$890.00 - $1,450.00",
         moq: "5 pieces",
         rating: 4.8,
-        image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=300&h=300&fit=crop",
+        image: product_4,
         category: "machinery"
       },
       {
@@ -90,7 +95,7 @@ const SupplierProfile = () => {
         price: "$25.00 - $45.00",
         moq: "500 pieces",
         rating: 4.5,
-        image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=300&h=300&fit=crop",
+        image: product_0,
         category: "components"
       }
     ],
@@ -176,7 +181,7 @@ const SupplierProfile = () => {
     contactPerson: {
       name: "Sarah Chen",
       title: "International Sales Manager",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop"
+      avatar: product_1
     },
     contactInfo: {
       phone: "+86 755 8888 9999",
@@ -195,21 +200,21 @@ const SupplierProfile = () => {
         reviewer: {
           name: "Michael Johnson",
           company: "TechCorp Industries",
-          avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+          avatar: product_2
         },
         rating: 5,
         date: "2024-08-10",
         comment: "Excellent quality products and outstanding customer service. TechnoMax has been our reliable supplier for over 3 years. Their attention to detail and commitment to delivery schedules is impressive.",
         product: "Industrial Control Panel",
         helpfulCount: 12,
-        images: ["https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=100&h=100&fit=crop"]
+        images: [product_3]
       },
       {
         id: 2,
         reviewer: {
           name: "Emma Rodriguez",
           company: "Global Manufacturing Ltd.",
-          avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop"
+          avatar: product_4
         },
         rating: 4,
         date: "2024-08-05",
@@ -222,7 +227,7 @@ const SupplierProfile = () => {
         reviewer: {
           name: "David Kim",
           company: "Innovation Electronics",
-          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+          avatar: product_0
         },
         rating: 5,
         date: "2024-07-28",
@@ -235,7 +240,7 @@ const SupplierProfile = () => {
         reviewer: {
           name: "Lisa Thompson",
           company: "Advanced Systems Inc.",
-          avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+          avatar: product_1
         },
         rating: 4,
         date: "2024-07-20",
@@ -248,7 +253,7 @@ const SupplierProfile = () => {
         reviewer: {
           name: "Robert Wilson",
           company: "Industrial Solutions Co.",
-          avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+          avatar: product_2
         },
         rating: 5,
         date: "2024-07-15",

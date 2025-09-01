@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import Header from '../../components/ui/Header';
+import Header from '../../components/Header';
 import WelcomeSection from './components/WelcomeSection';
 import RecommendedCategories from './components/RecommendedCategories';
 import TrendingProducts from './components/TrendingProducts';
@@ -49,7 +49,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Dashboard - GreenTrade B2B</title>
+        <title>Dashboard - sumic-online</title>
         <meta name="description" content="Your personalized B2B marketplace dashboard with product recommendations, supplier insights, and procurement tools." />
       </Helmet>
       <Header />
@@ -102,7 +102,7 @@ const Dashboard = () => {
                   <span className="text-white font-bold text-sm">GT</span>
                 </div>
                 <span className="text-xl font-semibold text-foreground">
-                  GreenTrade B2B
+                  sumic-online
                 </span>
               </div>
               <p className="text-muted-foreground mb-4 max-w-md">
@@ -144,7 +144,7 @@ const Dashboard = () => {
           
           <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              © {new Date()?.getFullYear()} GreenTrade B2B. All rights reserved.
+              © {new Date()?.getFullYear()} sumic-online. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-4 sm:mt-0">
               <span className="text-sm text-muted-foreground">Powered by secure technology</span>

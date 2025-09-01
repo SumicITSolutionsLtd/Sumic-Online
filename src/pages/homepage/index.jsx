@@ -10,7 +10,7 @@ import FastCustomization from './components/FastCustomization';
 import TopRankingProducts from './components/TopRankingProducts';
 import NewArrivals from './components/NewArrivals';
 import ProductCatalog from './components/ProductCatalog';
-import Header from '../../components/Header';
+import Header from '../../components/ui/TrasparentHeader';
 import HeroSection from './components/HeroSection';
 import "../../styles/homepage.css"
 import CardFeatures from './components/CardFeatures';

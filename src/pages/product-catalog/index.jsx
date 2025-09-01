@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import Header from '../../components/ui/Header';
+import Header from '../../components/Header';
 import BreadcrumbNavigation from '../../components/ui/BreadcrumbNavigation';
 import CategorySidebar from './components/CategorySidebar';
 import ProductToolbar from './components/ProductToolbar';
