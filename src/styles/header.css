@@ -135,11 +135,10 @@
     color: white;
 }
 
-/* When scrolled, use a different hover effect */
+/* When scrolled or mega menu open, use off-black hover effect */
 .sumic_nav.scrolled .mega-menu-trigger:hover,
 .sumic_nav.scrolled .mega-menu-trigger.active {
-    /* background-color: #22c55e; */
-    color: white;
+    color: #1f2937; /* Off-black color (gray-800) */
 }
 
 .header_extras {

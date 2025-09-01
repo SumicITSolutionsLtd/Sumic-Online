@@ -5,6 +5,10 @@ import DarkLogo from "../../media/dark_logo.png";
 import { Link } from "react-router-dom";
 import CategoriesMegaMenu, { getAllCategoriesMegaMenuData } from './megamenus/CategoriesMegaMenu';
 import AISourcingMegaMenu from './megamenus/AISourcingMegaMenu';
+import OrderProtectionMegaMenu from './megamenus/OrderProtectionMegaMenu';
+import FeaturedSelectionsMegaMenu from './megamenus/FeaturedSelectionsMegaMenu';
+import HelpCenterMegaMenu from './megamenus/HelpCenterMegaMenu';
+import MoreFromSumicMegaMenu from './megamenus/MoreFromSumicMegaMenu';
 import {
   ShoppingCart,
   Menu,
@@ -19,10 +23,18 @@ const TrasparentHeader = () => {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [megaMenuData, setMegaMenuData] = useState(null);
   const [showAISourcingMenu, setShowAISourcingMenu] = useState(false);
+  const [showOrderProtectionMenu, setShowOrderProtectionMenu] = useState(false);
+  const [showFeaturedSelectionsMenu, setShowFeaturedSelectionsMenu] = useState(false);
+  const [showHelpCenterMenu, setShowHelpCenterMenu] = useState(false);
+  const [showMoreFromSumicMenu, setShowMoreFromSumicMenu] = useState(false);
 
   const handleAllCategoriesHover = () => {
-    // Close AI Sourcing menu if open
+    // Close other menus if open
     setShowAISourcingMenu(false);
+    setShowOrderProtectionMenu(false);
+    setShowFeaturedSelectionsMenu(false);
+    setShowHelpCenterMenu(false);
+    setShowMoreFromSumicMenu(false);
     
     if (!showMegaMenu) {
       setMegaMenuData(getAllCategoriesMegaMenuData());
@@ -33,6 +45,10 @@ const TrasparentHeader = () => {
   const handleMegaMenuLeave = () => {
     setShowMegaMenu(false);
     setShowAISourcingMenu(false);
+    setShowOrderProtectionMenu(false);
+    setShowFeaturedSelectionsMenu(false);
+    setShowHelpCenterMenu(false);
+    setShowMoreFromSumicMenu(false);
     // Delay clearing data to prevent flicker
     setTimeout(() => {
       if (!showMegaMenu) {
@@ -42,16 +58,71 @@ const TrasparentHeader = () => {
   };
 
   const handleAISourcingHover = () => {
-    // Close Categories menu if open
+    // Close other menus if open
     setShowMegaMenu(false);
     setMegaMenuData(null);
+    setShowOrderProtectionMenu(false);
+    setShowFeaturedSelectionsMenu(false);
+    setShowHelpCenterMenu(false);
+    setShowMoreFromSumicMenu(false);
     
     setShowAISourcingMenu(true);
+  };
+
+  const handleOrderProtectionHover = () => {
+    // Close other menus if open
+    setShowMegaMenu(false);
+    setMegaMenuData(null);
+    setShowAISourcingMenu(false);
+    setShowFeaturedSelectionsMenu(false);
+    setShowHelpCenterMenu(false);
+    setShowMoreFromSumicMenu(false);
+    
+    setShowOrderProtectionMenu(true);
+  };
+
+  const handleFeaturedSelectionsHover = () => {
+    // Close other menus if open
+    setShowMegaMenu(false);
+    setMegaMenuData(null);
+    setShowAISourcingMenu(false);
+    setShowOrderProtectionMenu(false);
+    setShowHelpCenterMenu(false);
+    setShowMoreFromSumicMenu(false);
+    
+    setShowFeaturedSelectionsMenu(true);
+  };
+
+  const handleHelpCenterHover = () => {
+    // Close other menus if open
+    setShowMegaMenu(false);
+    setMegaMenuData(null);
+    setShowAISourcingMenu(false);
+    setShowOrderProtectionMenu(false);
+    setShowFeaturedSelectionsMenu(false);
+    setShowMoreFromSumicMenu(false);
+    
+    setShowHelpCenterMenu(true);
+  };
+
+  const handleMoreFromSumicHover = () => {
+    // Close other menus if open
+    setShowMegaMenu(false);
+    setMegaMenuData(null);
+    setShowAISourcingMenu(false);
+    setShowOrderProtectionMenu(false);
+    setShowFeaturedSelectionsMenu(false);
+    setShowHelpCenterMenu(false);
+    
+    setShowMoreFromSumicMenu(true);
   };
 
   const handleAISourcingLeave = () => {
     setShowAISourcingMenu(false);
   };
+
+  // Check if any mega menu is open
+  const isAnyMegaMenuOpen = showMegaMenu || showAISourcingMenu || showOrderProtectionMenu || showFeaturedSelectionsMenu || showHelpCenterMenu || showMoreFromSumicMenu;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,11 +133,11 @@ const TrasparentHeader = () => {
   }, []);
 
   return (
-    <div className={`sumic_nav ${scrolled ? "scrolled" : ""}`}>
+    <div className={`sumic_nav ${scrolled || isAnyMegaMenuOpen ? "scrolled" : ""}`}>
       <div className="header">
         <img
         style={{marginLeft:".8rem"}}
-          src={scrolled ? DarkLogo : Logo}
+          src={scrolled || isAnyMegaMenuOpen ? DarkLogo : Logo}
           alt="sumic online logo"
           className="logo"
         />
@@ -111,8 +182,22 @@ const TrasparentHeader = () => {
               >
                 All Categories
               </p>
-              <p className="header_extras_link">Featured selections</p>
-              <p className="header_extras_link">Order protection</p>
+              <p 
+                className={`header_extras_link mega-menu-trigger ${
+                  showFeaturedSelectionsMenu ? 'active' : ''
+                }`}
+                onMouseEnter={handleFeaturedSelectionsHover}
+              >
+                Featured selections
+              </p>
+              <p 
+                className={`header_extras_link mega-menu-trigger ${
+                  showOrderProtectionMenu ? 'active' : ''
+                }`}
+                onMouseEnter={handleOrderProtectionHover}
+              >
+                Order protection
+              </p>
             </div>
           </div>
           <div className="header_extras-right">
@@ -124,8 +209,22 @@ const TrasparentHeader = () => {
             >
               AI sourcing agent
             </p>
-            <p className="header_extras_link">Help center</p>
-            <p className="header_extras_link">More from Sumic</p>
+            <p 
+              className={`header_extras_link mega-menu-trigger ${
+                showHelpCenterMenu ? 'active' : ''
+              }`}
+              onMouseEnter={handleHelpCenterHover}
+            >
+              Help center
+            </p>
+            <p 
+              className={`header_extras_link mega-menu-trigger ${
+                showMoreFromSumicMenu ? 'active' : ''
+              }`}
+              onMouseEnter={handleMoreFromSumicHover}
+            >
+              More from Sumic
+            </p>
             <p className="header_extras_link">Become a supplier</p>
           </div>
           
@@ -137,6 +236,18 @@ const TrasparentHeader = () => {
           
           {/* AI Sourcing Mega Menu */}
           <AISourcingMegaMenu isVisible={showAISourcingMenu && !scrolled} />
+          
+          {/* Order Protection Mega Menu */}
+          <OrderProtectionMegaMenu isVisible={showOrderProtectionMenu && !scrolled} />
+          
+          {/* Featured Selections Mega Menu */}
+          <FeaturedSelectionsMegaMenu isVisible={showFeaturedSelectionsMenu && !scrolled} />
+          
+          {/* Help Center Mega Menu */}
+          <HelpCenterMegaMenu isVisible={showHelpCenterMenu && !scrolled} />
+          
+          {/* More from Sumic Mega Menu */}
+          <MoreFromSumicMegaMenu isVisible={showMoreFromSumicMenu && !scrolled} />
         </div>
       )}
    

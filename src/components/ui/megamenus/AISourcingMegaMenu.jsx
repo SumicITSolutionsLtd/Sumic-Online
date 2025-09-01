@@ -6,7 +6,7 @@ const AISourcingMegaMenu = ({ isVisible }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="mega-menu-ai absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-200 z-50 animate-in slide-in-from-top-2 duration-150">
+    <div className="mega mega-menu-ai absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-200 z-50 animate-in slide-in-from-top-2 duration-150">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Content Section */}
