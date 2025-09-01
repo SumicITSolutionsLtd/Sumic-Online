@@ -5,6 +5,7 @@ import SupplierHeader from './components/SupplierHeader';
 import SupplierTabs from './components/SupplierTabs';
 import ContactSidebar from './components/ContactSidebar';
 import CustomerReviews from './components/CustomerReviews';
+import Footer from '../../components/Footer';
 import product_0 from '../../media/products/product_0.jpg';
 import product_1 from '../../media/products/product_1.jpg';
 import product_2 from '../../media/products/product_2.jpg';
@@ -295,6 +296,7 @@ const SupplierProfile = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

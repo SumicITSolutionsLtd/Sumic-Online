@@ -28,6 +28,8 @@
   color: black;
 }
 
+
+
 .header{
     height: 5rem;
     display: flex;
@@ -71,7 +73,7 @@
     display: flex;
     font-size: .8rem;
     align-items: center;
-    gap: .3rem;
+    gap: 1rem;
 }
 
 

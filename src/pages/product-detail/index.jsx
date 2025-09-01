@@ -7,6 +7,7 @@ import ProductInfo from './components/ProductInfo';
 import ProductTabs from './components/ProductTabs';
 import RelatedProducts from './components/RelatedProducts';
 import StickyActionBar from './components/StickyActionBar';
+import Footer from '../../components/Footer';
 import product_0 from '../../media/products/product_0.jpg';
 import product_1 from '../../media/products/product_1.jpg';
 import product_2 from '../../media/products/product_2.jpg';
@@ -241,6 +242,7 @@ const ProductDetail = () => {
         onRequestQuote={handleRequestQuote}
         isVisible={showStickyBar}
       />
+      <Footer />
     </div>
   );
 };

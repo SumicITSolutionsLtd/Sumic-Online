@@ -8,7 +8,7 @@ import BusinessInfoStep from './components/BusinessInfoStep';
 import CompanyProfileStep from './components/CompanyProfileStep';
 import VerificationStep from './components/VerificationStep';
 import PlatformBenefits from './components/PlatformBenefits';
-import logo from '../../media/logo.png';
+import Footer from '../../components/Footer';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -188,7 +188,10 @@ const Register = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <Link to="/dashboard" className="flex items-center space-x-2">
-                <img src={logo} alt="sumic-online" className="h-8 w-auto" />
+                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">S</span>
+                </div>
+                <span className="text-xl font-semibold text-foreground">Sumic Online</span>
               </Link>
               
               <div className="flex items-center space-x-4">
@@ -262,27 +265,7 @@ const Register = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="bg-card border-t border-border mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground">
-                © {new Date()?.getFullYear()} sumic-online. All rights reserved.
-              </p>
-              <div className="flex items-center justify-center space-x-6 mt-4">
-                <Link to="/terms" className="text-xs text-muted-foreground hover:text-foreground transition-smooth">
-                  Terms of Service
-                </Link>
-                <Link to="/privacy" className="text-xs text-muted-foreground hover:text-foreground transition-smooth">
-                  Privacy Policy
-                </Link>
-                <Link to="/support" className="text-xs text-muted-foreground hover:text-foreground transition-smooth">
-                  Support
-                </Link>
-              </div>
-            </div>
-          </div>
-        </footer>
+<Footer />
       </div>
     </>
   );

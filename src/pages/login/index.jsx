@@ -4,7 +4,7 @@ import LoginHeader from './components/LoginHeader';
 import LoginForm from './components/LoginForm';
 import TrustSignals from './components/TrustSignals';
 import PlatformBenefits from './components/PlatformBenefits';
-import logo from '../../media/logo.png';
+import Footer from '../../components/Footer';
 
 const LoginPage = () => {
   return (
@@ -42,74 +42,7 @@ const LoginPage = () => {
           </div>
         </main>
 
-        {/* Footer */}
-        <footer className="bg-card border-t border-border mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="md:col-span-2">
-                <div className="flex items-center space-x-2 mb-4">
-                  <img src={logo} alt="sumic-online" className="h-8 w-auto" />
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  The world's leading B2B marketplace connecting businesses with verified suppliers globally.
-                </p>
-                <div className="flex items-center space-x-4">
-                  <span className="text-xs text-muted-foreground">Secure payments by:</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-5 bg-muted rounded flex items-center justify-center">
-                      <span className="text-xs font-bold">VISA</span>
-                    </div>
-                    <div className="w-8 h-5 bg-muted rounded flex items-center justify-center">
-                      <span className="text-xs font-bold">MC</span>
-                    </div>
-                    <div className="w-8 h-5 bg-muted rounded flex items-center justify-center">
-                      <span className="text-xs font-bold">PP</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h4 className="text-sm font-semibold text-foreground mb-3">Company</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="#" className="hover:text-foreground transition-smooth">About Us</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-smooth">Careers</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-smooth">Press</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-smooth">Contact</a></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-sm font-semibold text-foreground mb-3">Legal</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="#" className="hover:text-foreground transition-smooth">Privacy Policy</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-smooth">Terms of Service</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-smooth">Cookie Policy</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-smooth">GDPR</a></li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="border-t border-border mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
-              <p className="text-xs text-muted-foreground">
-                © {new Date()?.getFullYear()} sumic-online. All rights reserved.
-              </p>
-              <div className="flex items-center space-x-4 mt-4 sm:mt-0">
-                <span className="text-xs text-muted-foreground">Follow us:</span>
-                <div className="flex items-center space-x-2">
-                  <a href="#" className="text-muted-foreground hover:text-foreground transition-smooth">
-                    <span className="sr-only">LinkedIn</span>
-                    <div className="w-5 h-5 bg-muted rounded"></div>
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-foreground transition-smooth">
-                    <span className="sr-only">Twitter</span>
-                    <div className="w-5 h-5 bg-muted rounded"></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+<Footer />
       </div>
     </>
   );

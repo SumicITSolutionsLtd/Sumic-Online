@@ -45,7 +45,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <div className="flex items-center">
-            <Link to="/dashboard" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <img src={logo} alt="sumic-online" className="h-8 w-auto" />
             </Link>
           </div>

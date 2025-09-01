@@ -5,6 +5,7 @@ import BreadcrumbNavigation from '../../components/ui/BreadcrumbNavigation';
 import CategorySidebar from './components/CategorySidebar';
 import ProductToolbar from './components/ProductToolbar';
 import ProductGrid from './components/ProductGrid';
+import Footer from '../../components/Footer';
 import SavedSearches from './components/SavedSearches';
 import product_0 from '../../media/products/product_0.jpg';
 import product_1 from '../../media/products/product_1.jpg';
@@ -420,6 +421,7 @@ const ProductCatalog = () => {
           onClose={() => setSidebarOpen(false)}
         />
       </main>
+      <Footer />
     </div>
   );
 };
