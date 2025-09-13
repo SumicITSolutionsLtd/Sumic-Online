@@ -1,116 +1,152 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Icon from './AppIcon';
-import GlobalSearch from './ui/GlobalSearch';
-import UserAccountDropdown from './ui/UserAccountDropdown';
-import MobileMenuToggle from './ui/MobileMenuToggle';
-import logo from '../media/dark_logo.png';
+// src/components/header/ Header.js
+import React, { useState } from "react";
+import "../styles/header.css";
+import DarkLogo from "../media/dark_logo.png";
+import { Link } from "react-router-dom";
+import CategoriesMegaMenu, { getAllCategoriesMegaMenuData } from "../components/ui/megamenus/CategoriesMegaMenu";
+import AISourcingMegaMenu from "../components/ui/megamenus/AISourcingMegaMenu";
+import OrderProtectionMegaMenu from "../components/ui/megamenus/OrderProtectionMegaMenu";
+import FeaturedSelectionsMegaMenu from "../components/ui/megamenus/FeaturedSelectionsMegaMenu";
+import HelpCenterMegaMenu from "../components/ui/megamenus/HelpCenterMegaMenu";
+import MoreFromSumicMegaMenu from "../components/ui/megamenus/MoreFromSumicMegaMenu";
+import {
+  ShoppingCart,
+  Menu,
+  ClipboardList,
+  User,
+  MessageCircle,
+  Globe,
+} from "lucide-react";
 
 const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [megaMenuData, setMegaMenuData] = useState(null);
 
-  const navigationItems = [
-    {
-      label: 'Products',
-      path: '/product-catalog',
-      icon: 'Package',
-      tooltip: 'Browse product catalog and specifications'
-    },
-    {
-      label: 'Suppliers',
-      path: '/supplier-profile',
-      icon: 'Building2',
-      tooltip: 'View supplier profiles and verification status'
-    },
-    {
-      label: 'Dashboard',
-      path: '/dashboard',
-      icon: 'LayoutDashboard',
-      tooltip: 'Your personalized marketplace overview'
+  const handleHover = (menu) => {
+    if (menu === "categories") {
+      setMegaMenuData(getAllCategoriesMegaMenuData());
+    } else {
+      setMegaMenuData(null);
     }
-  ];
-
-  const isActivePath = (path) => {
-    return location?.pathname === path || location?.pathname?.startsWith(path);
+    setActiveMenu(menu);
   };
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const handleLeave = () => {
+    setActiveMenu(null);
+    setMegaMenuData(null);
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo Section */}
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <img src={logo} alt="sumic-online" className="h-8 w-auto" />
-            </Link>
+    <div className="sumic_nav scrolled">
+      <div className="header">
+        <img
+          style={{ marginLeft: ".8rem" }}
+          src={DarkLogo}
+          alt="sumic online logo"
+          className="logo"
+        />
+
+        <div className="nav">
+          <div className="header_location">
+            <p>Deliver to:</p>
+            <p>Uganda</p>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems?.map((item) => (
-              <Link
-                key={item?.path}
-                to={item?.path}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-smooth ${
-                  isActivePath(item?.path)
-                    ? 'text-primary bg-primary/10' :'text-muted-foreground hover:text-foreground hover:bg-muted'
-                }`}
-                title={item?.tooltip}
-              >
-                <Icon name={item?.icon} size={18} />
-                <span>{item?.label}</span>
-              </Link>
-            ))}
-          </nav>
+          <button className="header_ic ic_nest" title="Language">
+            <Globe size={22} />
+            <p>English</p>
+          </button>
 
-          {/* Search and Account Section */}
-          <div className="flex items-center space-x-4">
-            <div className="hidden sm:block">
-              <GlobalSearch />
-            </div>
-            <UserAccountDropdown />
-            <div className="md:hidden">
-              <MobileMenuToggle 
-                isOpen={isMobileMenuOpen} 
-                onToggle={toggleMobileMenu} 
-              />
-            </div>
-          </div>
-        </div>
+          <Link to="/" className="header_ic" title="Chat">
+            <MessageCircle size={22} />
+          </Link>
+          <Link to="/" className="header_ic" title="Orders">
+            <ClipboardList size={22} />
+          </Link>
 
-        {/* Mobile Search */}
-        <div className="sm:hidden pb-3">
-          <GlobalSearch />
+          <Link to="/cart" className="header_ic" title="Cart">
+            <ShoppingCart size={22} />
+          </Link>
+          <Link to="/login" className="header_ic ic_nest" title="Login">
+            <User size={22} />
+            <p>Sign in</p>
+          </Link>
         </div>
       </div>
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-card border-t border-border">
-          <div className="px-4 py-3 space-y-1">
-            {navigationItems?.map((item) => (
-              <Link
-                key={item?.path}
-                to={item?.path}
-                className={`flex items-center space-x-3 px-3 py-3 rounded-md text-base font-medium transition-smooth ${
-                  isActivePath(item?.path)
-                    ? 'text-primary bg-primary/10' :'text-muted-foreground hover:text-foreground hover:bg-muted'
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <Icon name={item?.icon} size={20} />
-                <span>{item?.label}</span>
-              </Link>
-            ))}
+
+      {/* Extras section (always visible in   mode) */}
+      <div className="header_extras" onMouseLeave={handleLeave}>
+        <div className="header_extras-left">
+          <div className="ic_nest" title="All Categories">
+            <Menu className="header_extras_ic" size={22} />
+            <p
+              className={`header_extras_link mega-menu-trigger ${
+                activeMenu === "categories" ? "active" : ""
+              }`}
+              onMouseEnter={() => handleHover("categories")}
+            >
+              All Categories
+            </p>
+            <p
+              className={`header_extras_link mega-menu-trigger ${
+                activeMenu === "featured" ? "active" : ""
+              }`}
+              onMouseEnter={() => handleHover("featured")}
+            >
+              Featured selections
+            </p>
+            <p
+              className={`header_extras_link mega-menu-trigger ${
+                activeMenu === "order" ? "active" : ""
+              }`}
+              onMouseEnter={() => handleHover("order")}
+            >
+              Order protection
+            </p>
           </div>
         </div>
-      )}
-    </header>
+
+        <div className="header_extras-right">
+          <p
+            className={`header_extras_link mega-menu-trigger ${
+              activeMenu === "ai" ? "active" : ""
+            }`}
+            onMouseEnter={() => handleHover("ai")}
+          >
+            AI sourcing agent
+          </p>
+          <p
+            className={`header_extras_link mega-menu-trigger ${
+              activeMenu === "help" ? "active" : ""
+            }`}
+            onMouseEnter={() => handleHover("help")}
+          >
+            Help center
+          </p>
+          <p
+            className={`header_extras_link mega-menu-trigger ${
+              activeMenu === "more" ? "active" : ""
+            }`}
+            onMouseEnter={() => handleHover("more")}
+          >
+            More from Sumic
+          </p>
+          <p className="header_extras_link">Become a supplier</p>
+        </div>
+
+        {/* Mega Menus */}
+        <CategoriesMegaMenu
+          isVisible={activeMenu === "categories"}
+          megaMenuData={megaMenuData}
+        />
+        <AISourcingMegaMenu isVisible={activeMenu === "ai"} />
+        <OrderProtectionMegaMenu isVisible={activeMenu === "order"} />
+        <FeaturedSelectionsMegaMenu isVisible={activeMenu === "featured"} />
+        <HelpCenterMegaMenu isVisible={activeMenu === "help"} />
+        <MoreFromSumicMegaMenu isVisible={activeMenu === "more"} />
+      </div>
+    </div>
   );
 };
 
-export default Header;
+export default  Header;

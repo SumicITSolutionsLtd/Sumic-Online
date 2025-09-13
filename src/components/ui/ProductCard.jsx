@@ -109,13 +109,13 @@ const ProductCard = ({
         )}
 
         {/* Shopping Cart Icon */}
-        <div className="absolute top-2 right-2">
+        {/* <div className="absolute top-2 right-2">
           <div className="bg-white rounded-full p-2 shadow-md">
             <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m4.5-5a2 2 0 11-4 0 2 2 0 014 0zm6 0a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
           </div>
-        </div>
+        </div> */}
 
         {/* Image Indicators */}
         {images.length > 1 && (
@@ -199,7 +199,7 @@ const ProductCard = ({
         }`}>
           <div className="p-4 space-y-2">
             <button className="w-full bg-black text-white py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
-              See preview
+              Add to Cart
             </button>
             <button className="w-full border border-gray-300 text-gray-700 py-2 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
               Similar items

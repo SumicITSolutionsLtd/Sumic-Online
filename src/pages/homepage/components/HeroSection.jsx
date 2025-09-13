@@ -1,7 +1,9 @@
 import React from 'react'
 import "../../../styles/hero_section.css"
-import { Menu, Search, Camera } from 'lucide-react';
+import { Menu, Search, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+
 
 
 function HeroSection() {
@@ -30,10 +32,14 @@ function HeroSection() {
                                 </button>
 
                             </div>
-                            <button className="image-btn">
-                                <Camera className='hc_icon' size={15} />
-                                <p className='hc_btn_links'>Image Search</p>
+<Link to="product-catalog">
+
+                            <button style={{height: "100%"}} className="image-btn">
+                                <ShoppingBag className='hc_icon' size={15} />
+                                <p className='hc_btn_links'>Shop Now</p>
                             </button>
+</Link>
+                        
                         </div>
 
 

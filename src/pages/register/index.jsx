@@ -9,6 +9,7 @@ import CompanyProfileStep from './components/CompanyProfileStep';
 import VerificationStep from './components/VerificationStep';
 import PlatformBenefits from './components/PlatformBenefits';
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -184,33 +185,10 @@ const Register = () => {
       </Helmet>
       <div className="min-h-screen bg-background">
         {/* Simplified Header */}
-        <header className="bg-card border-b border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <Link to="/dashboard" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">S</span>
-                </div>
-                <span className="text-xl font-semibold text-foreground">Sumic Online</span>
-              </Link>
-              
-              <div className="flex items-center space-x-4">
-                <span className="text-sm text-muted-foreground">
-                  Already have an account?
-                </span>
-                <Link
-                  to="/login"
-                  className="text-sm font-medium text-primary hover:text-primary/80 transition-smooth"
-                >
-                  Sign In
-                </Link>
-              </div>
-            </div>
-          </div>
-        </header>
+ <Header/>
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div  style={{marginTop: '10rem'}} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Registration Form */}
             <div className="lg:col-span-2">

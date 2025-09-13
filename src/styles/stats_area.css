@@ -13,13 +13,13 @@
 
 .stats_title{
     width: 100%;
-    background-color: red;
+    /* background-color: red; */
     font-weight: 00;
     font-size: 44px;
 }
 
 .stats-area{
-    background-color: green;
+    /* background-color: green; */
     display: flex;
     width: 70%;
 

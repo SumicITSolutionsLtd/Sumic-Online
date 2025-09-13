@@ -55,12 +55,12 @@ const RecommendedCategories = () => {
   return (
     <div className="bg-card rounded-xl p-6 shadow-card">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-foreground">
+        <h2 className="text-sm font-semibold text-foreground">
           Recommended Categories
         </h2>
         <Link 
           to="/product-catalog"
-          className="text-primary hover:text-primary/80 text-sm font-medium transition-smooth"
+          className="text-primary hover:text-primary/80 text-xs font-medium transition-smooth"
         >
           View All Categories
         </Link>

@@ -19,7 +19,7 @@ const Dashboard = () => {
   // Mock user data - in real app, this would come from authentication context
   useEffect(() => {
     const mockUser = {
-      name: "John Smith",
+      name: "Kalanzi",
       email: "john.smith@company.com",
       company: "Smith Manufacturing Co.",
       role: "Procurement Manager",
@@ -37,7 +37,7 @@ const Dashboard = () => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="pt-16 flex items-center justify-center min-h-screen">
+        <div className="pt-15 flex items-center justify-center min-h-screen">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
             <p className="text-muted-foreground">Loading your dashboard...</p>
@@ -54,7 +54,7 @@ const Dashboard = () => {
         <meta name="description" content="Your personalized B2B marketplace dashboard with product recommendations, supplier insights, and procurement tools." />
       </Helmet>
       <Header />
-      <main className="pt-16">
+      <main style={{marginTop:"6rem"}}  className="pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Welcome Section */}
           <WelcomeSection user={user} />
@@ -84,7 +84,7 @@ const Dashboard = () => {
           <PopularSuppliers />
           
           {/* Fast Customization Section */}
-          <FastCustomization />
+          {/* <FastCustomization /> */}
           
           {/* Top Ranking Products */}
           <TopRankingProducts />

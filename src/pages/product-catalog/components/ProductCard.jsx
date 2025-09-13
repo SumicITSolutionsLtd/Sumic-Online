@@ -239,14 +239,14 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
                   {product?.supplier?.rating} ({product?.supplier?.reviewCount})
                 </span>
               </div>
-              <span className="text-xs text-muted-foreground">
+              {/* <span className="text-xs text-muted-foreground">
                 {product?.supplier?.location}
-              </span>
+              </span> */}
             </div>
           </div>
 
           {/* Certifications */}
-          {product?.certifications && product?.certifications?.length > 0 && (
+          {/* {product?.certifications && product?.certifications?.length > 0 && (
             <div className="flex flex-wrap gap-1">
               {product?.certifications?.slice(0, 2)?.map((cert, index) => (
                 <span 
@@ -262,11 +262,11 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
                 </span>
               )}
             </div>
-          )}
+          )} */}
         </div>
 
         {/* Action Buttons */}
-        <div className="flex items-center space-x-2 mt-4">
+        <div style={{flexDirection:"column"}} className="flex items-center space-x-2 mt-4">
           <Button
             variant="outline"
             size="sm"
@@ -277,16 +277,15 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
           >
             Add to Cart
           </Button>
-          <Button
+          {/* <Button
             variant="default"
             size="sm"
             onClick={handleRequestQuote}
             iconName="MessageSquare"
             iconPosition="left"
-            fullWidth
-          >
+            fullWidth >
             Quote
-          </Button>
+          </Button> */}
         </div>
       </div>
     </Link>

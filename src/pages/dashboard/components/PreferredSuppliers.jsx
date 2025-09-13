@@ -76,8 +76,8 @@ const PreferredSuppliers = () => {
       <div className="space-y-4">
         {suppliers?.map((supplier) => (
           <div key={supplier?.id} className="border border-border rounded-lg p-4 hover:shadow-card transition-smooth">
-            <div className="flex items-start space-x-4">
-              <div className="w-16 h-16 rounded-lg overflow-hidden bg-muted flex-shrink-0">
+            <div style={{flexDirection:"column"}} className="flex items-start space-x-4">
+              <div className="w-16 mb-2 ml-3 h-16 rounded-lg overflow-hidden bg-muted flex-shrink-0">
                 <Image
                   src={supplier?.logo}
                   alt={supplier?.name}
@@ -86,7 +86,7 @@ const PreferredSuppliers = () => {
               </div>
               
               <div className="flex-1 min-w-0">
-                <div className="flex items-start justify-between mb-2">
+                <div style={{flexDirection:"column"}} className="flex items-start justify-between mb-2">
                   <div>
                     <Link
                       to={`/supplier-profile?id=${supplier?.id}`}
@@ -94,7 +94,7 @@ const PreferredSuppliers = () => {
                     >
                       {supplier?.name}
                     </Link>
-                    <div className="flex items-center space-x-2 mt-1">
+                    {/* <div className="flex items-center space-x-2 mt-1">
                       {supplier?.verified && (
                         <span className="bg-success/10 text-success text-xs px-2 py-1 rounded-full flex items-center">
                           <Icon name="CheckCircle" size={12} className="mr-1" />
@@ -107,7 +107,7 @@ const PreferredSuppliers = () => {
                           Gold
                         </span>
                       )}
-                    </div>
+                    </div> */}
                   </div>
                   
                   <div className="flex items-center space-x-1 text-sm">
@@ -135,10 +135,10 @@ const PreferredSuppliers = () => {
                   </div>
                 </div>
                 
-                <div className="flex space-x-2">
-                  <Button variant="outline" size="sm" iconName="MessageSquare" iconPosition="left">
+                <div style={{flexDirection:"column"}} className="flex space-x-2">
+                  {/* <Button variant="outline" size="sm" iconName="MessageSquare" iconPosition="left">
                     Message
-                  </Button>
+                  </Button> */}
                   <Button variant="outline" size="sm" iconName="RotateCcw" iconPosition="left">
                     Reorder
                   </Button>

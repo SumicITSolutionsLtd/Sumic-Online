@@ -4,6 +4,7 @@ import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
 import { Checkbox } from '../../../components/ui/Checkbox';
 import Icon from '../../../components/AppIcon';
+import Logo from "../../../media/dark_logo.png"
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -133,15 +134,12 @@ const LoginForm = () => {
   return (
     <div className="w-full max-w-md mx-auto bg-card rounded-lg shadow-card p-8">
       <div className="text-center mb-8">
-        <h1 className="text-2xl font-semibold text-foreground mb-2">
-          Sign In to Your Account
-        </h1>
-        <p className="text-muted-foreground">
-          Access your B2B marketplace dashboard
-        </p>
+  
+  <img style={{width: "10rem",
+      placeSelf: "center"}} src={Logo}/>
       </div>
 
-      {/* Demo Credentials Helper */}
+      {/* Demo Credentials Helper
       <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
         <div className="flex items-start space-x-3">
           <Icon name="Info" size={20} className="text-blue-600 mt-0.5" />
@@ -160,7 +158,7 @@ const LoginForm = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {errors?.general && (
         <div className="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">

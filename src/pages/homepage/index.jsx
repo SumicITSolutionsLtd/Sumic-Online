@@ -31,6 +31,7 @@ const Homepage = () => {
 
 <Header/>
 <HeroSection/>
+
 <CardFeatures/>
 <Stats/>
 <Discover/>
