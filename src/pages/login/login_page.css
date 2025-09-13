@@ -1,0 +1,17 @@
+.login-screen{
+    background-image: url("../../media/new_bg.png");
+}
+
+.backhome{
+    display: flex;
+    gap: .5rem;
+    color: white;
+    font-size: .8rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.backhome:hover{
+    color: rgb(192, 191, 191);
+}

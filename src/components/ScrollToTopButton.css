@@ -6,13 +6,13 @@
 }
 
 .scroll-to-top-button {
-  background-color: #007bff;
+  background-color: #22c55e;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -22,10 +22,10 @@
 }
 
 .scroll-to-top-button:hover {
-  background-color: #0056b3;
+  background-color: #1eab52;
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
@@ -35,4 +35,4 @@
   60% {
     transform: translateY(-15px);
   }
-}
+} */

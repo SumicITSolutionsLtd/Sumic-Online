@@ -28,10 +28,10 @@ export default function EmpoweringBusinesses() {
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
-            <p className="eb_title text-green-500 text-sm font-semibold">OUR MISSION</p>
+            <p className="eb_title text-green-500 text-sm font-semibold">START TODAY</p>
             <h2 className="text-white text-xl md:text-2xl font-bold">
-              Make it easy to do business anywhere.
-            </h2>
+              Our team is ready to get you started.
+                          </h2>
           </div>
         </div>
 
@@ -42,7 +42,8 @@ export default function EmpoweringBusinesses() {
           <div>
             <p  className="eb_title text-green-500 text-sm font-semibold">OUR LOCATIONS</p>
             <h2 className="text-2xl font-bold text-brown-800 mt-2">
-              Our team is ready to get you started.
+              Make it easy to do business anywhere.
+
             </h2>
           </div>
           <div className="mt-6 text-gray-700 text-sm leading-relaxed">

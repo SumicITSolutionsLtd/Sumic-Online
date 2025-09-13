@@ -18,7 +18,7 @@ const LoginForm = () => {
 
   // Mock credentials for authentication
   const mockCredentials = {
-    email: 'john.smith@company.com',
+    email: 'root.sumic@company.com',
     password: 'Business123!'
   };
 
@@ -85,7 +85,7 @@ const LoginForm = () => {
         const authData = {
           user: {
             email: formData?.email,
-            name: 'John Smith',
+            name: 'Sumic_dev',
             company: 'Smith Manufacturing Co.',
             loginTime: new Date()?.toISOString()
           },
@@ -133,11 +133,11 @@ const LoginForm = () => {
 
   return (
     <div className="w-full max-w-md mx-auto bg-card rounded-lg shadow-card p-8">
-      <div className="text-center mb-8">
+      {/* <div className="text-center mb-8">
   
   <img style={{width: "10rem",
       placeSelf: "center"}} src={Logo}/>
-      </div>
+      </div> */}
 
       {/* Demo Credentials Helper
       <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
@@ -224,6 +224,7 @@ const LoginForm = () => {
         >
           {isLoading ? 'Signing In...' : 'Sign In'}
         </Button>
+  
       </form>
 
       <div className="mt-8 text-center">
