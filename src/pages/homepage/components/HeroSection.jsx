@@ -32,7 +32,7 @@ function HeroSection() {
                                 </button>
 
                             </div>
-<Link to="product-catalog">
+<Link to="products">
 
                             <button style={{height: "100%"}} className="image-btn">
                                 <ShoppingBag className='hc_icon' size={15} />

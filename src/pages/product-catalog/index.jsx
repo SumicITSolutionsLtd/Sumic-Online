@@ -359,7 +359,7 @@ const ProductCatalog = () => {
           {/* Page Header */}
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-foreground mb-2">
-              Product Catalog
+              Browse Our Products
             </h1>
             <p className="text-muted-foreground">
               Discover quality products from verified suppliers worldwide
@@ -414,12 +414,12 @@ const ProductCatalog = () => {
         </div>
 
         {/* Mobile Sidebar */}
-        <CategorySidebar
+        {/* <CategorySidebar
           onFiltersChange={handleFiltersChange}
           activeFilters={filters}
           isOpen={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
-        />
+        /> */}
       </main>
       <Footer />
     </div>

@@ -10,6 +10,7 @@ import LoginPage from './pages/login';
 import Dashboard from './pages/dashboard';
 import Register from './pages/register';
 import Homepage from './pages/homepage';
+import CartPage from './pages/cart';
 
 const Routes = () => {
   return (
@@ -21,11 +22,12 @@ const Routes = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/product-detail" element={<ProductDetail />} />
-        <Route path="/product-catalog" element={<ProductCatalog />} />
+        <Route path="/products" element={<ProductCatalog />} />
         <Route path="/supplier-profile" element={<SupplierProfile />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<CartPage />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </RouterRoutes>
       {/* </ErrorBoundary> */}
