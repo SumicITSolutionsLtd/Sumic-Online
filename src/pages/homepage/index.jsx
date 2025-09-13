@@ -31,22 +31,22 @@ const Homepage = () => {
         <meta name="description" content="sumicIT B2B marketplace connecting manufacturers, suppliers, and business buyers worldwide. Find quality products, negotiate better prices." />
       </Helmet>
 
-<Header/>
-<HeroSection/>
+      <Header />
+      <HeroSection />
 
-<CardFeatures/>
-<Stats/>
-<Discover/>
-{/* main content */}
+      <CardFeatures />
+      <Stats />
+      <Discover />
+      {/* main content */}
       <MarketplaceSection />
-      
+
       {/* Products Section */}
       <ProductGrid />
       {/* products go here */}
-<FromFactory/>
-<TradeConfidence/>
-<EmpoweringBusinesses/>
-<Footer />
+      <FromFactory />
+      <TradeConfidence />
+      <EmpoweringBusinesses />
+      <Footer />
     </div>
   );
 };

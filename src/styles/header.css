@@ -70,11 +70,11 @@
     /* background-color: red; */
 }
 
-.ic_nest{
+.ic_nest {
     display: flex;
     font-size: .8rem;
     align-items: center;
-    gap: 1rem;
+    gap: .3rem;
 }
 
 

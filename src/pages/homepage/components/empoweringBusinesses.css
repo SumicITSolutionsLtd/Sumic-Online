@@ -1,0 +1,21 @@
+
+.empowering_businesses{
+    margin-top: 6rem;
+}
+
+.countris_support{
+    background-image: url("../../../media/bg3.jpg");
+    background-size: contain;
+    display: flex;
+}
+
+.eb_right{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.eb_title{
+        font-weight: 700 !important;
+
+}
