@@ -135,13 +135,16 @@ const TrasparentHeader = () => {
   return (
     <div className={`sumic_nav ${scrolled || isAnyMegaMenuOpen ? "scrolled" : ""}`}>
       <div className="header">
+        <Link to="/">
+        
+        
         <img
-        style={{marginLeft:".8rem"}}
+        style={{marginLeft:".8rem", cursor:"pointer"}}
           src={scrolled || isAnyMegaMenuOpen ? DarkLogo : Logo}
           alt="sumic online logo"
           className="logo"
         />
-
+</Link>
         <div className="nav">
           <div className="header_location">
             <p>Deliver to:</p>

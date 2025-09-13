@@ -25,14 +25,14 @@ const TrustSignals = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Chen',
+      name: 'Kalanzi Dixon',
       company: 'Global Manufacturing Ltd.',
       role: 'Procurement Director',
       content: `sumic-online has streamlined our supplier sourcing process. We've reduced procurement time by 40% and found reliable partners worldwide.`,
       avatar: product_0
     },
     {
-      name: 'Michael Rodriguez',company: 'TechComponents Inc.',role: 'Supply Chain Manager',
+      name: 'Gift Ayebare',company: 'TechComponents Inc.',role: 'Supply Chain Manager',
       content: `The platform's verification system gives us confidence in new suppliers. We've expanded our vendor network significantly through sumic-online.`,
       avatar: product_1
     }

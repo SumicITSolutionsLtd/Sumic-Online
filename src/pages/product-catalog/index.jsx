@@ -41,7 +41,7 @@ const ProductCatalog = () => {
       id: '1',
       name: 'Professional Fitness Equipment Set - Commercial Grade Dumbbells',
       description: 'High-quality commercial grade dumbbells perfect for gyms and fitness centers. Durable construction with anti-slip grip.',
-      image: product_0,
+      images: [product_0, product_1],
       priceRange: { min: 45, max: 120 },
       moq: 50,
       supplier: {
@@ -60,7 +60,7 @@ const ProductCatalog = () => {
       id: '2',
       name: 'Wireless Bluetooth Headphones - Premium Audio Quality',
       description: 'Premium wireless headphones with noise cancellation and 30-hour battery life. Perfect for retail and wholesale.',
-      image: product_1,
+      images: [product_1, product_2],
       priceRange: { min: 25, max: 85 },
       moq: 100,
       supplier: {
@@ -79,7 +79,7 @@ const ProductCatalog = () => {
       id: '3',
       name: 'Industrial Packaging Machine - Automatic Sealing System',
       description: 'Fully automatic packaging machine for industrial use. High-speed sealing with precision control systems.',
-      image: product_2,
+      images: [product_2, product_3],
       priceRange: { min: 15000, max: 45000 },
       moq: 1,
       supplier: {
@@ -98,7 +98,7 @@ const ProductCatalog = () => {
       id: '4',
       name: 'Organic Skincare Products - Natural Beauty Line',
       description: 'Premium organic skincare products made with natural ingredients. Perfect for beauty retailers and spas.',
-      image: product_3,
+      images: [product_3, product_4],
       priceRange: { min: 12, max: 35 },
       moq: 200,
       supplier: {
@@ -117,7 +117,7 @@ const ProductCatalog = () => {
       id: '5',
       name: 'Smart Home Security Camera System - 4K Resolution',
       description: '4K security camera system with AI detection and cloud storage. Ideal for residential and commercial use.',
-      image: product_4,
+      images: [product_4, product_0],
       priceRange: { min: 150, max: 400 },
       moq: 25,
       supplier: {
@@ -136,7 +136,7 @@ const ProductCatalog = () => {
       id: '6',
       name: 'Premium Cotton Fabric - Wholesale Textile Materials',
       description: 'High-quality cotton fabric suitable for clothing manufacturing. Available in various colors and patterns.',
-      image: product_0,
+      images: [product_0, product_1],
       priceRange: { min: 8, max: 25 },
       moq: 500,
       supplier: {
@@ -155,7 +155,7 @@ const ProductCatalog = () => {
       id: '7',
       name: 'LED Lighting Solutions - Energy Efficient Bulbs',
       description: 'Energy-efficient LED bulbs for commercial and residential use. Long-lasting with excellent light quality.',
-      image: product_1,
+      images: [product_1, product_2],
       priceRange: { min: 3, max: 15 },
       moq: 1000,
       supplier: {
@@ -174,7 +174,7 @@ const ProductCatalog = () => {
       id: '8',
       name: 'Stainless Steel Kitchen Equipment - Commercial Grade',
       description: 'Professional stainless steel kitchen equipment for restaurants and commercial kitchens. Durable and hygienic.',
-      image: product_2,
+      images: [product_2, product_3],
       priceRange: { min: 200, max: 800 },
       moq: 10,
       supplier: {

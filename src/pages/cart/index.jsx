@@ -1,19 +1,26 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import CartItem from './components/CartItem';
 import CartSummary from './components/CartSummary';
 import EmptyCart from './components/EmptyCart';
 import SavedForLater from './components/SavedForLater';
+import Header from '../../components/Header';
+import productOne from "../../media/products/product_0.jpg"
+import productTwo from "../../media/products/product_1.jpg"
+import productThree from "../../media/products/product_2.jpg"
+import Footer from '../../components/Footer';
+
+
 
 const CartPage = () => {
   // Sample cart data (you can pull this dynamically later)
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      store: "Keajor Health Store",
+      store: "Kick n' Kicks",
       product: {
-        name: "Nose Hair Trimmer Rechargeable Electric Nose Hair Remover Men",
-        image: "https://via.placeholder.com/100", // replace with real image
+        name: "The kicks were released as a retro in 2004, with new limited colorways in high and low top versions for men and women",
+        image: productOne, 
       },
       price: 24714,
       oldPrice: 51492,
@@ -23,10 +30,10 @@ const CartPage = () => {
     },
     {
       id: 2,
-      store: "axnen Global Store",
+      store: "Kikubo Global Store",
       product: {
         name: "2-in-1 Wireless Lavalier Microphone for iPhone Android, Mini Pro Lapel Mic",
-        image: "https://via.placeholder.com/100", // replace with real image
+        image: productTwo, 
       },
       price: 57828,
       oldPrice: 63414,
@@ -72,8 +79,9 @@ const CartPage = () => {
   const estimatedTotal = subtotal; // shipping is free
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 lg:p-8">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-6">
+    <div className="min-h-screen bg-gray-100">
+      <Header/>
+      <div style={{paddingTop: "12rem", paddingBottom:"5rem"}} className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-6">
         {/* Cart Items */}
         <div className="flex-1 bg-white p-6 rounded-2xl shadow">
           <h2 className="text-xl font-bold mb-4">Cart ({cartItems.length})</h2>
@@ -103,6 +111,7 @@ const CartPage = () => {
           estimatedTotal={estimatedTotal}
         />
       </div>
+      <Footer/>
     </div>
   );
 };

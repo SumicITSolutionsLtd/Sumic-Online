@@ -7,6 +7,7 @@ import Button from '../../../components/ui/Button';
 const ProductCard = ({ product, viewMode = 'grid' }) => {
   const [isWishlisted, setIsWishlisted] = useState(product?.isWishlisted || false);
   const [imageLoading, setImageLoading] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleWishlistToggle = (e) => {
     e?.preventDefault();
@@ -38,7 +39,7 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
           {/* Product Image */}
           <div className="flex-shrink-0 w-32 h-32 bg-muted rounded-lg overflow-hidden">
             <Image
-              src={product?.image}
+              src={product?.images[0]}
               alt={product?.name}
               className="w-full h-full object-cover"
               onLoad={() => setImageLoading(false)}
@@ -159,17 +160,26 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
     <Link 
       to={`/product-detail?id=${product?.id}`}
       className="block bg-card border border-border rounded-lg hover:shadow-card transition-smooth group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="p-4">
         {/* Product Image */}
         <div className="relative mb-3">
           <div className="aspect-square bg-muted rounded-lg overflow-hidden">
             <Image
-              src={product?.image}
+              src={product?.images[0]}
               alt={product?.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className={`w-full h-full object-cover transition-opacity duration-300 ${isHovered ? 'opacity-0' : 'opacity-100'}`}
               onLoad={() => setImageLoading(false)}
             />
+            {product?.images.length > 1 && (
+              <Image
+                src={product?.images[1]}
+                alt={product?.name}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+              />
+            )}
             {imageLoading && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <Icon name="Loader2" size={24} className="animate-spin text-muted-foreground" />

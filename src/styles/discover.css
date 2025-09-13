@@ -1,8 +1,10 @@
 /* Opportunities.css */
 .opportunities {
-  padding: 40px;
-  background: #f8f8f8;
-  font-family: Arial, sans-serif;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    background: #f8f8f8;
+    font-family: Arial, sans-serif;
 }
 
 

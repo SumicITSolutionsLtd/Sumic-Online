@@ -7,6 +7,7 @@ import MenClothingsImage from "../../media/mens_clothing.png"
 import HomeImprovemntImage from "../../media/home_improvement.png"
 import Accessories from "../../media/accessories.png"
 import ProductImage1 from "../../media/products/product_1.jpg"
+import "./marketplace.css"
 
 const MarketplaceSection = ({
   heroData = {

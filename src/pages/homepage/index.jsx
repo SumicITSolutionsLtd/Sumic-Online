@@ -20,6 +20,8 @@ import FromFactory from './components/FromFactory.jsx';
 import Footer from '../../components/Footer';
 import MarketplaceSection from '../../components/ui/MarketplaceSection';
 import ProductGrid from '../../components/ui/ProductGrid';
+import TradeConfidence from './TradeConfidence';
+import EmpoweringBusinesses from './components/EmpoweringBusinesses';
 
 const Homepage = () => {
   return (
@@ -42,6 +44,8 @@ const Homepage = () => {
       <ProductGrid />
       {/* products go here */}
 <FromFactory/>
+<TradeConfidence/>
+<EmpoweringBusinesses/>
 <Footer />
     </div>
   );

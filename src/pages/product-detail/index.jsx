@@ -43,7 +43,7 @@ const ProductDetail = () => {
     features: [
       "High corrosion resistance with SS316L material",
       "Precision machined for perfect fit and seal",
-      "Temperature range: -40°C to +400°C",
+      // "Temperature range: -40°C to +400°C",
       "Pressure rating up to 6000 PSI",
       "Available in multiple sizes from 1/4\" to 4\"",
       "Compliant with ASTM, ANSI, and DIN standards",
@@ -67,13 +67,13 @@ const ProductDetail = () => {
 
   const specifications = [
     { label: "Material", value: "Stainless Steel 316L" },
-    { label: "Size Range", value: "1/4\" - 4\" (DN8 - DN100)" },
-    { label: "Pressure Rating", value: "150LB - 2500LB" },
-    { label: "Temperature Range", value: "-40°C to +400°C" },
-    { label: "Thread Type", value: "NPT, BSP, Metric" },
+    { label: "Size Range", value: "1/4\" - 4\" " },
+    // { label: "Pressure Rating", value: "150LB - 2500LB" },
+    // { label: "Temperature Range", value: "-40°C to +400°C" },
+    // { label: "Thread Type", value: "NPT, BSP, Metric" },
     { label: "Surface Finish", value: "Mirror Polish" },
-    { label: "Standards", value: "ASTM A182, ANSI B16.11" },
-    { label: "Testing", value: "PMI, Hydrostatic, Visual" }
+    // { label: "Standards", value: "ASTM A182, ANSI B16.11" },
+    // { label: "Testing", value: "PMI, Hydrostatic, Visual" }
   ];
 
   const reviews = [

@@ -56,10 +56,10 @@ const ProductImageGallery = ({ images, productName }) => {
           )}
 
           {/* Zoom Indicator */}
-          <div className="absolute top-4 right-4 bg-white/80 px-2 py-1 rounded text-xs font-medium">
+          {/* <div style={{cursor:"pointer"}} className="absolute top-4 right-4 bg-white/80 px-2 py-1 rounded text-xs font-medium">
             <Icon name="ZoomIn" size={14} className="inline mr-1" />
             Click to zoom
-          </div>
+          </div> */}
         </div>
       </div>
       {/* Thumbnail Gallery */}

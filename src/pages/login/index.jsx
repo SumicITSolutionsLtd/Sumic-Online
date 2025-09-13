@@ -14,14 +14,14 @@ const LoginPage = () => {
         <meta name="description" content="Sign in to your sumic-online account to access verified suppliers, secure payments, and global trade opportunities." />
         <meta name="keywords" content="B2B login, business account, supplier access, secure signin" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-primary/10">
-        {/* <Header /> */}
+      <div style={{backgroundColor:"#ffffff1a"}}  className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-primary/10">
+        <Header />
         
         <main className="pt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
               {/* Login Form - Center Column */}
-              <div style={{height:"100vh"}} className="lg:col-start-2 lg:col-end-3">
+              <div style={{height:"100vh", marginTop:"10rem"}} className="lg:col-start-2 lg:col-end-3">
                 <LoginForm />
               </div>
 

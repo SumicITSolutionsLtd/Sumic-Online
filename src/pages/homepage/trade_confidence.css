@@ -1,0 +1,20 @@
+.trade_title {
+    /* background-color: red; */
+    font-size: 35px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+
+.call-us-trade-confidence{
+    margin-top: 8rem;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../../media/callus.jpg");
+    background-size: contain;
+}
+
+.trade_title_container{
+    width: 40rem;
+}
