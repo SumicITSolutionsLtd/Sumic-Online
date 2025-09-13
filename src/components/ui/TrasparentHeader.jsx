@@ -204,6 +204,16 @@ const TrasparentHeader = () => {
             </div>
           </div>
           <div className="header_extras-right">
+           
+                 <p 
+              className={`header_extras_link mega-menu-trigger ${
+                showMoreFromSumicMenu ? 'active' : ''
+              }`}
+              onMouseEnter={handleMoreFromSumicHover}
+            >
+              Learn more about SumicIT solutions
+            </p>
+           
             <p 
               className={`header_extras_link mega-menu-trigger ${
                 showAISourcingMenu ? 'active' : ''
@@ -220,14 +230,7 @@ const TrasparentHeader = () => {
             >
               Help center
             </p>
-            <p 
-              className={`header_extras_link mega-menu-trigger ${
-                showMoreFromSumicMenu ? 'active' : ''
-              }`}
-              onMouseEnter={handleMoreFromSumicHover}
-            >
-              More from Sumic
-            </p>
+      
             <p className="header_extras_link">Become a supplier</p>
           </div>
           
@@ -236,7 +239,9 @@ const TrasparentHeader = () => {
             isVisible={showMegaMenu && !scrolled} 
             megaMenuData={megaMenuData}
           />
-          
+                    {/* More from Sumic Mega Menu */}
+
+                    <MoreFromSumicMegaMenu isVisible={showMoreFromSumicMenu && !scrolled} />
           {/* AI Sourcing Mega Menu */}
           <AISourcingMegaMenu isVisible={showAISourcingMenu && !scrolled} />
           
@@ -249,8 +254,6 @@ const TrasparentHeader = () => {
           {/* Help Center Mega Menu */}
           <HelpCenterMegaMenu isVisible={showHelpCenterMenu && !scrolled} />
           
-          {/* More from Sumic Mega Menu */}
-          <MoreFromSumicMegaMenu isVisible={showMoreFromSumicMenu && !scrolled} />
         </div>
       )}
    

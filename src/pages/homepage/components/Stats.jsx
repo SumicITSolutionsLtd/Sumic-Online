@@ -10,31 +10,31 @@ function Stats() {
         <div className='stats-area'>
         <div className='top-stats'>
                 <div className='stats-item border-l'>
-                <h3 className='stats-item-title'>100M+</h3>
+                <h3 className='stats-item-title'>10+</h3>
                 <p className='stats-item-desc'>
                     Businesses
                 </p>
             </div>
 
                 <div className='stats-item border-l'>
-                <h3 className='stats-item-title'>100K+</h3>
+                <h3 className='stats-item-title'>50+</h3>
                 <p className='stats-item-desc'>
-                    Businesses
+                    suppliers
                 </p>
             </div>
         </div>
          <div className='top-stats lower-stats'>
                 <div className='stats-item border-l'>
-                <h3 className='stats-item-title'>5,900</h3>
+                <h3 className='stats-item-title'>590</h3>
                 <p className='stats-item-desc'>
-                    product Categories
+                    products
                 </p>
             </div>
 
                 <div className='stats-item border-l'>
-                <h3 className='stats-item-title'>200+</h3>
+                <h3 className='stats-item-title'>30+</h3>
                 <p className='stats-item-desc'>
-                    countries & regions
+   regions
                 </p>
             </div>
         </div>
