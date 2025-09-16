@@ -6,7 +6,7 @@ import "../../../styles/Features.css";
 const features = [
   {
     icon: <LayoutGrid size={32} />,
-    title: "Millions of business offerings",
+    title: "Hundreds of business offerings",
     desc: "Explore products and suppliers for your business from millions of offerings worldwide."
   },
   {

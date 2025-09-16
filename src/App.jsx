@@ -3,6 +3,8 @@ import Routes from "./Routes";
 import DevelopmentBanner from "./components/ui/DevelopmentBanner";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import "./components/ui/mega_menu.css"
+import "./mobile.css"
+
 
 function App() {
   return (

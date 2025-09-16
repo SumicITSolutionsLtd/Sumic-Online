@@ -6,7 +6,7 @@ import "../../../styles/stats_area.css";
 function Stats() {
   return (
     <div className='stats-section'>
-      <h2 className='stats_title'>Exlore millions of offerings tailored to your business needs</h2>
+      <h2 className='stats_title'>Exlore hundreds of offerings tailored to your business needs</h2>
       <div className='stats-area'>
         <div className='top-stats'>
           <div className='stats-item border-l'>
