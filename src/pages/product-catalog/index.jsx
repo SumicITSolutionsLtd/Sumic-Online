@@ -352,7 +352,7 @@ const ProductCatalog = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main style={{marginTop:"15rem"}}>
+      <main className='products_page' style={{marginTop:"15rem"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <BreadcrumbNavigation customBreadcrumbs={breadcrumbs} />
           
@@ -362,7 +362,7 @@ const ProductCatalog = () => {
               Browse Our Products
             </h1>
             <p className="text-muted-foreground">
-              Discover quality products from verified suppliers worldwide
+              Discover quality products from verified suppliers
             </p>
           </div>
 

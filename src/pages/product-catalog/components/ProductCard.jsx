@@ -63,7 +63,7 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
                 </p>
                 
                 {/* Price and MOQ */}
-                <div className="flex items-center space-x-4 mb-3">
+                <div className="sumic_flex flex space-x-4 mb-3">
                   <div>
                     <span className="text-lg font-bold text-primary">
                       ${product?.priceRange?.min} - ${product?.priceRange?.max}
@@ -76,7 +76,7 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
                 </div>
 
                 {/* Supplier Info */}
-                <div className="flex items-center space-x-2 mb-3">
+                <div className="sumic_flex flex items-left space-x-2 mb-3">
                   <Link 
                     to={`/supplier-profile?id=${product?.supplier?.id}`}
                     className="text-sm font-medium text-foreground hover:text-primary transition-smooth"
@@ -84,19 +84,21 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
                   >
                     {product?.supplier?.name}
                   </Link>
-                  <div className="flex items-center space-x-1">
+                  {/* country and ratings ommited for now...sorry */}
+
+                  {/* <div className="sumic_left flex items-center space-x-1">
                     <Icon name="Star" size={14} className="text-warning fill-current" />
                     <span className="text-sm text-muted-foreground">
                       {product?.supplier?.rating} ({product?.supplier?.reviewCount})
                     </span>
-                  </div>
-                  <span className="text-sm text-muted-foreground">
+                  </div> */}
+                  {/* <span className="sumic_product_country text-sm text-muted-foreground">
                     {product?.supplier?.location}
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* Certifications */}
-                {product?.certifications && product?.certifications?.length > 0 && (
+                {/* {product?.certifications && product?.certifications?.length > 0 && (
                   <div className="flex items-center space-x-2 mb-3">
                     {product?.certifications?.slice(0, 3)?.map((cert, index) => (
                       <span 
@@ -112,7 +114,7 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
                       </span>
                     )}
                   </div>
-                )}
+                )} */}
               </div>
 
               {/* Wishlist Button */}
@@ -129,7 +131,7 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex items-center space-x-2">
+            <div className="sumic_flex flex items-center space-x-2">
               <Button
                 variant="outline"
                 size="sm"

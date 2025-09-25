@@ -117,8 +117,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Sumic Group</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Sumic Group Website, SumicExpress, Alimama, Alipay, Fliggy, Sumic Cloud, Sumic International, 
-              SumiTelecom, DingTalk, Juhuasuan, Taobao Marketplace, Tmall, Taobao Global, AliOS, 1688
+              Sumic Group Website, SumicAcademy, Neexa AI, SumicIT, Sumic International, SumicWorkflow
             </p>
           </div>
         </div>

@@ -104,7 +104,7 @@ const ProductToolbar = ({
       {/* Main Toolbar */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         {/* Left Section */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 justify-between">
           {/* Mobile Filter Toggle */}
           <Button
             variant="outline"
@@ -129,9 +129,9 @@ const ProductToolbar = ({
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center space-x-3">
+        <div className="justify-between flex items-center space-x-3">
           {/* Image Search */}
-          <Button
+          {/* <Button
             variant="outline"
             size="sm"
             onClick={handleImageSearch}
@@ -139,7 +139,7 @@ const ProductToolbar = ({
             iconPosition="left"
           >
             Image Search
-          </Button>
+          </Button> */}
 
           {/* Sort Dropdown */}
           <div className="w-48">

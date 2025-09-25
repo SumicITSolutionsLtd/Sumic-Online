@@ -6,7 +6,9 @@ import ElectronicsImage from "../../media/electronics.png"
 import MenClothingsImage from "../../media/mens_clothing.png"
 import HomeImprovemntImage from "../../media/home_improvement.png"
 import Accessories from "../../media/accessories.png"
-import ProductImage1 from "../../media/products/product_1.jpg"
+import ProductImage1 from "/src/media/products/product_1.jpg"
+import ProductImage2 from "/src/media/products/product_2.jpg"
+
 import "./marketplace.css"
 
 const MarketplaceSection = ({
@@ -14,7 +16,7 @@ const MarketplaceSection = ({
     title: "Ladies Only",
     subtitle: "Your marketplace choice",
     buttonText: "Shop now",
-    buttonLink: "/shop",
+    buttonLink: "/products",
     backgroundImage: "/src/media/blue_bg.png"
   },
   productCards = [
@@ -24,16 +26,16 @@ const MarketplaceSection = ({
       originalPrice: "UGX91,297",
       rating: 4.1,
       image: ProductImage1,
-      sold: "494 sold"
+      sold: "44 sold"
     },
     {
       id: 2,
       price: "UGX39,010",
       originalPrice: "UGX78,020",
       rating: 4.9,
-      image: ProductImage1,
+      image: ProductImage2,
 
-      sold: "700+ sold"
+      sold: "70+ sold"
     },
     // {
     //   id: 3,
@@ -51,7 +53,7 @@ const MarketplaceSection = ({
       title: "Home & Garden",
       icon: "home",
       color: "green",
-      link: "/categories/home-garden",
+      link: "/products",
       backgroundImage: HomeGardenImage
     },
     {
@@ -59,7 +61,7 @@ const MarketplaceSection = ({
       title: "Hair Extensions & Wigs",
       icon: "user",
       color: "pink",
-      link: "/categories/hair-extensions",
+      link: "/products",
       backgroundImage: WigsImage
     },
     {
@@ -67,7 +69,7 @@ const MarketplaceSection = ({
       title: "Men's Clothing",
       icon: "user",
       color: "blue",
-      link: "/categories/mens-clothing",
+      link: "/products",
       backgroundImage: MenClothingsImage
     },
     {
@@ -75,7 +77,7 @@ const MarketplaceSection = ({
       title: "Accessories",
       icon: "clock",
       color: "yellow",
-      link: "/categories/accessories",
+      link: "/products",
       backgroundImage: Accessories
     },
     {
@@ -83,7 +85,7 @@ const MarketplaceSection = ({
       title: "Electronics",
       icon: "monitor",
       color: "purple",
-      link: "/categories/electronics",
+      link: "/products",
       backgroundImage: ElectronicsImage
     },
     {
@@ -91,7 +93,7 @@ const MarketplaceSection = ({
       title: "Home Improvement & Lighting",
       icon: "lightbulb",
       color: "orange",
-      link: "/categories/home-improvement",
+      link: "/products",
       backgroundImage: HomeImprovemntImage
     }
   ]
@@ -186,7 +188,7 @@ const MarketplaceSection = ({
               <div className="sbc_grid grid grid grid-cols-3 gap-3 mt-8">
                 {productCards.map((product) => (
                   <div key={product.id} className="bg-white rounded-lg p-3 text-black border border-gray-200">
-                    <div className="h-32 bg-gray-100 rounded mb-2">
+                    <div className=" bg-gray-100 rounded mb-2">
                       <img style={{ marginBottom: 1, borderRadius:5 }} src={product.image} alt="" />
                     </div>
                     <div style={{marginTop: "2rem"}} >

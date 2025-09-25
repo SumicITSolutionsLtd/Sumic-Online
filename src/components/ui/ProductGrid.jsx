@@ -55,7 +55,7 @@ const ProductGrid = ({
         { type: 'sale', text: 'Sale' }
       ],
       savings: 64245,
-      promotions: ['$3 off when you buy 3...']
+      // promotions: ['$3 off when you buy 3...']
     },
     {
       id: 4,
@@ -109,6 +109,7 @@ const ProductGrid = ({
       id: 7,
       title: "Gaming Mouse Pad Large Extended Mousepad",
       price: 15230,
+      savings: 74150,
       originalPrice: 28500,
       rating: 4.3,
       reviewCount: 500,

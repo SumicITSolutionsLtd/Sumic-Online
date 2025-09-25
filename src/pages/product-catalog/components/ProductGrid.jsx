@@ -22,7 +22,7 @@ const ProductGrid = ({
 
   if (products?.length === 0) {
     return (
-      <div className="flex items-center justify-center py-12">
+      <div className=" flex items-center justify-center py-12">
         <div className="text-center">
           <Icon name="Package" size={48} className="text-muted-foreground mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-foreground mb-2">No products found</h3>

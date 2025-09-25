@@ -56,7 +56,7 @@ const ProductCard = ({
 
   return (
     <div 
-      className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-green-300 hover:shadow-lg transition-all duration-300 group relative"
+      className="product-card bg-white border-2 border-gray-200 rounded-lg overflow-hidden hover:border-green-300 hover:shadow-lg transition-all duration-300 group relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -154,8 +154,8 @@ const ProductCard = ({
               </span>
             )}
           </div>
-          
-          {discountPrice && (
+          <div className='pricing_flex'>
+{discountPrice && (
             <div className="text-xs text-red-500 font-medium">
               {formatPrice(discountPrice)} off on {formatPrice(originalPrice - discountPrice)}
             </div>
@@ -166,20 +166,23 @@ const ProductCard = ({
               Save {formatPrice(savings)}
             </div>
           )}
+          </div>
+          
         </div>
 
         {/* Rating and Sales */}
         <div className="mt-2 flex items-center justify-between text-xs">
           <div className="flex items-center gap-1">
-            <div className="flex">
+            {/* <div className="flex">
               {renderStars(rating)}
             </div>
-            <span className="text-gray-600">{rating}</span>
-            <span className="text-gray-500">| {reviewCount}+ sold</span>
-          </div>
-          {soldCount && (
+            <span className="text-gray-600">{rating}</span> */}
+            {/* <span className="text-gray-500">{reviewCount}+ sold</span> */}
+          {/* {soldCount && (
             <span className="text-gray-500">{soldCount} sold</span>
-          )}
+          )} */}
+          </div>
+         
         </div>
 
         {/* Promotions */}

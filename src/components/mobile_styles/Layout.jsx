@@ -36,11 +36,12 @@ const Layout = ({ children }) => {
 
   const renderHeader = () => {
     const isHomePage = location.pathname === '/';
+    const isLogin = location.pathname === '/login';
 
     if (isMobile) {
       return (
         <>
-          {isHomePage ? (
+          {isHomePage || isLogin ? (
             <HomeMobileHeader onMenuClick={handleMenuClick} />
           ) : (
             <MobileHeader onMenuClick={handleMenuClick} />
@@ -49,6 +50,8 @@ const Layout = ({ children }) => {
         </>
       );
     }
+
+  
 
     if (isHomePage) {
       return <TrasparentHeader />;

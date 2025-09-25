@@ -81,7 +81,7 @@ const CartPage = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <Header/>
-      <div style={{paddingTop: "12rem", paddingBottom:"5rem"}} className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-6">
+      <div style={{paddingTop: "12rem", paddingBottom:"5rem"}} className="cart_page max-w-6xl mx-auto flex flex-col lg:flex-row gap-6">
         {/* Cart Items */}
         <div className="flex-1 bg-white p-6 rounded-2xl shadow">
           <h2 className="text-xl font-bold mb-4">Cart ({cartItems.length})</h2>
