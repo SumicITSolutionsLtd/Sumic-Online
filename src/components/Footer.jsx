@@ -26,15 +26,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Shopping with us */}
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-4">Shopping with us</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li><Link to="#" className="hover:text-gray-900 transition-colors">Making payments</Link></li>
-              <li><Link to="#" className="hover:text-gray-900 transition-colors">Delivery options</Link></li>
-              <li><Link to="#" className="hover:text-gray-900 transition-colors">Buyer Protection</Link></li>
-            </ul>
-          </div>
+        
 
           {/* Collaborate with us */}
           <div>
@@ -45,6 +37,17 @@ const Footer = () => {
               <li><Link to="#" className="hover:text-gray-900 transition-colors">DS Center</Link></li>
               <li><Link to="#" className="hover:text-gray-900 transition-colors">Seller Log In</Link></li>
                     <li><Link to="#" className="hover:text-gray-900 transition-colors">Become a payment partner with us</Link></li>
+            </ul>
+          </div>
+
+
+            {/* Shopping with us */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Shopping with us</h3>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li><Link to="#" className="hover:text-gray-900 transition-colors">Making payments</Link></li>
+              <li><Link to="#" className="hover:text-gray-900 transition-colors">Delivery options</Link></li>
+              <li><Link to="#" className="hover:text-gray-900 transition-colors">Buyer Protection</Link></li>
             </ul>
           </div>
 
