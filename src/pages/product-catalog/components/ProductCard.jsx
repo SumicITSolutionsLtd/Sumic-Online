@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import { useCart } from '../../../context/CartContext';
 
-const ProductCard = ({ product, viewMode = 'grid' }) => {
+const ProductCard = ({ product, viewMode = 'grid', onShowNotification }) => {
   const [isWishlisted, setIsWishlisted] = useState(product?.isWishlisted || false);
   const [imageLoading, setImageLoading] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const { addToCart } = useCart();
 
   const handleWishlistToggle = (e) => {
     e?.preventDefault();
@@ -18,8 +20,14 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
   const handleAddToCart = (e) => {
     e?.preventDefault();
     e?.stopPropagation();
-    // Add to cart logic
-    console.log('Added to cart:', product?.id);
+    addToCart({
+      id: product?.id,
+      title: product?.name,
+      price: product?.priceRange?.min, // Using min price as the product price
+      images: product?.images,
+      // Add other necessary product details here if needed by your cart context
+    });
+    onShowNotification(`${product?.name} added to cart!`);
   };
 
   const handleRequestQuote = (e) => {
@@ -286,6 +294,7 @@ const ProductCard = ({ product, viewMode = 'grid' }) => {
             iconName="ShoppingCart"
             iconPosition="left"
             fullWidth
+            className="bg-green-500 hover:bg-green-600 text-white"
           >
             Add to Cart
           </Button>

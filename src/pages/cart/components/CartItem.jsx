@@ -16,11 +16,11 @@ const CartItem = ({ store, product, price, oldPrice, upcomingPrice, shipping, qt
         {/* Details */}
         <div className="flex-1">
           <p className="text-sm font-medium">{product.name}</p>
-          <p className="text-green-600 font-bold">UGX {price.toLocaleString()}</p>
-          <p className="text-xs line-through text-gray-500">UGX {oldPrice.toLocaleString()}</p>
+          <p className="text-green-600 font-bold">UGX {price?.toLocaleString()}</p>
+          <p className="text-xs line-through text-gray-500">UGX {oldPrice?.toLocaleString()}</p>
           {upcomingPrice && (
             <p className="text-xs text-green-500">
-              Upcoming price UGX {upcomingPrice.toLocaleString()}
+              Upcoming price UGX {upcomingPrice?.toLocaleString()}
             </p>
           )}
           <p className="text-xs text-gray-500">{shipping}</p>

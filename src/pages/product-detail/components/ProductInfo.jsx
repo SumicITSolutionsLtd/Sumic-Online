@@ -124,11 +124,12 @@ const ProductInfo = ({ product, onQuantityChange, onAddToCart, onRequestQuote })
       {/* Action Buttons */}
       <div className="space-y-3">
         <Button
-          variant="default"
+          variant="success"
           fullWidth
           iconName="ShoppingCart"
           iconPosition="left"
           onClick={() => onAddToCart(selectedQuantity)}
+          className="hover:bg-green-600"
         >
           Add to Cart
         </Button>

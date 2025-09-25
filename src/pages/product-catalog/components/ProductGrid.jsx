@@ -7,7 +7,8 @@ const ProductGrid = ({
   viewMode, 
   loading, 
   hasMore, 
-  onLoadMore 
+  onLoadMore, 
+  onShowNotification 
 }) => {
   if (loading && products?.length === 0) {
     return (
@@ -47,6 +48,7 @@ const ProductGrid = ({
             key={product?.id}
             product={product}
             viewMode={viewMode}
+            onShowNotification={onShowNotification}
           />
         ))}
       </div>

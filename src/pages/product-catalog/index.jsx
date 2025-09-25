@@ -12,6 +12,7 @@ import product_1 from '../../media/products/product_1.jpg';
 import product_2 from '../../media/products/product_2.jpg';
 import product_3 from '../../media/products/product_3.jpg';
 import product_4 from '../../media/products/product_4.jpg';
+import CartNotificationBanner from '../../components/ui/CartNotificationBanner';
 
 
 const ProductCatalog = () => {
@@ -22,6 +23,8 @@ const ProductCatalog = () => {
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const [showNotification, setShowNotification] = useState(false);
+  const [notificationMessage, setNotificationMessage] = useState('');
 
   // Filter state
   const [filters, setFilters] = useState({
@@ -343,6 +346,12 @@ const ProductCatalog = () => {
     }, 1000);
   };
 
+  const handleShowNotification = (message) => {
+    setNotificationMessage(message);
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 3000); // Hide after 3 seconds
+  };
+
   const breadcrumbs = [
     { label: 'Home', path: '/dashboard' },
     { label: 'Product Catalog', path: '/product-catalog', isLast: true }
@@ -407,6 +416,7 @@ const ProductCatalog = () => {
                   loading={loading}
                   hasMore={hasMore}
                   onLoadMore={handleLoadMore}
+                  onShowNotification={handleShowNotification}
                 />
               </div>
             </div>
@@ -418,10 +428,15 @@ const ProductCatalog = () => {
           onFiltersChange={handleFiltersChange}
           activeFilters={filters}
           isOpen={sidebarOpen}
-          onClose={() => setSidebarOpen(false)}
+          onClose={() => {}}
         /> */}
       </main>
       <Footer />
+      <CartNotificationBanner 
+        message={notificationMessage} 
+        isVisible={showNotification} 
+        onClose={() => setShowNotification(false)} 
+      />
     </div>
   );
 };

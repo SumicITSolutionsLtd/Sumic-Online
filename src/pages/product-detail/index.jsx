@@ -13,11 +13,16 @@ import product_1 from '../../media/products/product_1.jpg';
 import product_2 from '../../media/products/product_2.jpg';
 import product_3 from '../../media/products/product_3.jpg';
 import product_4 from '../../media/products/product_4.jpg';
+import { useCart } from '../../context/CartContext';
+import CartNotificationBanner from '../../components/ui/CartNotificationBanner';
 
 const ProductDetail = () => {
   const [searchParams] = useSearchParams();
   const [selectedQuantity, setSelectedQuantity] = useState(1000);
   const [showStickyBar, setShowStickyBar] = useState(false);
+  const { addToCart } = useCart();
+  const [showNotification, setShowNotification] = useState(false);
+  const [notificationMessage, setNotificationMessage] = useState('');
 
   // Mock product data
   const product = {
@@ -180,9 +185,16 @@ const ProductDetail = () => {
   };
 
   const handleAddToCart = (quantity) => {
-    console.log('Adding to cart:', { productId: product?.id, quantity });
-    // In real app, this would add to cart context/state
-    alert(`Added ${quantity?.toLocaleString()} units to cart`);
+    addToCart({
+      id: product?.id,
+      title: product?.name,
+      price: product?.priceTiers[0]?.price, // Use the first tier price as the base price
+      images: product?.images,
+      quantity: quantity,
+    });
+    setNotificationMessage(`${quantity?.toLocaleString()} units of ${product?.name} added to cart!`);
+    setShowNotification(true);
+    setTimeout(() => setShowNotification(false), 3000); // Hide after 3 seconds
   };
 
   const handleRequestQuote = (quantity) => {
@@ -243,6 +255,11 @@ const ProductDetail = () => {
         isVisible={showStickyBar}
       />
       <Footer />
+      <CartNotificationBanner 
+        message={notificationMessage} 
+        isVisible={showNotification} 
+        onClose={() => setShowNotification(false)} 
+      />
     </div>
   );
 };

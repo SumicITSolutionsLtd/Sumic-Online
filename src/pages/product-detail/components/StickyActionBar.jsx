@@ -74,10 +74,11 @@ const StickyActionBar = ({
               Quote
             </Button>
             <Button
-              variant="default"
+              variant="success"
               size="sm"
               iconName="ShoppingCart"
               onClick={() => onAddToCart(selectedQuantity)}
+              className="hover:bg-green-600"
             >
               Add to Cart
             </Button>

@@ -40,7 +40,7 @@ const CartSummary = ({ itemsTotal, discount, subtotal, shipping, estimatedTotal,
       {/* Checkout Button */}
       <button 
         onClick={onCheckout}
-        className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-2xl font-semibold transition-colors"
+        className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-3xl font-semibold transition-colors"
       >
         Checkout ({cartItemCount})
       </button>

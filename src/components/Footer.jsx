@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Icon from './AppIcon';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok } from 'react-icons/fa';
 import PaymentIcons from './PaymentIcons';
 import Logo from "../media/dark_logo.png";
+import Icon from './AppIcon';
+import { FaSquareXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -41,9 +44,7 @@ const Footer = () => {
               <li><Link to="#" className="hover:text-gray-900 transition-colors">Affiliate program</Link></li>
               <li><Link to="#" className="hover:text-gray-900 transition-colors">DS Center</Link></li>
               <li><Link to="#" className="hover:text-gray-900 transition-colors">Seller Log In</Link></li>
-              <li><Link to="#" className="hover:text-gray-900 transition-colors">中国卖家入驻</Link></li>
-              <li><Link to="#" className="hover:text-gray-900 transition-colors">Non-Chinese Seller Registration</Link></li>
-              <li><Link to="#" className="hover:text-gray-900 transition-colors">Become a payment partner with us</Link></li>
+                    <li><Link to="#" className="hover:text-gray-900 transition-colors">Become a payment partner with us</Link></li>
             </ul>
           </div>
 
@@ -62,21 +63,27 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Stay connected</h3>
             <div className="flex space-x-3">
-              <Link to="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                <Icon name="Facebook" size={20} />
-              </Link>
-              <Link to="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                <Icon name="Twitter" size={20} />
-              </Link>
-              <Link to="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                <Icon name="Instagram" size={20} />
-              </Link>
-              <Link to="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                <Icon name="MessageCircle" size={20} />
-              </Link>
-              <Link to="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                <Icon name="Phone" size={20} />
-              </Link>
+              <a href="https://www.facebook.com/sumiconline/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <FaFacebookF size={20} />
+              </a>
+              <a href="https://x.com/sumiconline" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+
+<FaSquareXTwitter size={20}/>
+  
+       </a>
+              <a href="https://www.instagram.com/sumiconline/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <FaInstagram size={20} />
+              </a>
+              <a href="https://ug.linkedin.com/company/sumiconline-com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <FaLinkedinIn size={20} />
+              </a>
+              <a href="https://www.youtube.com/@sumiconline" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <FaYoutube size={20} />
+              </a>
+              <a href="https://www.tiktok.com/@sumicgroup" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <FaTiktok size={20} />
+              </a>
+          
             </div>
           </div>
         </div>
@@ -117,8 +124,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Sumic Group</h3>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Sumic Group Website, SumicAcademy, Neexa AI, SumicIT, Sumic International, SumicWorkflow
-            </p>
+Sumic IT Solutions Ltd, Sumic Online, Sumic International Academy, SUMICode, Sumic Foundation            </p>
           </div>
         </div>
 

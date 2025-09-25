@@ -88,7 +88,7 @@ const MoreFromSumicMegaMenu = ({ isVisible }) => {
             <div className="flex space-x-4">
 
               <a
-                href="https://sumicitsolutions.com/"
+                href="https://sumicinternational.academy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block border border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
