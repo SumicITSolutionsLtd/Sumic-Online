@@ -13,16 +13,16 @@ const MoreFromSumicMegaMenu = ({ isVisible }) => {
           <div className="space-y-6">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Sumic <span className="text-green-600">Academy</span>
+                Sumic <span className="text-green-600">IT Solutions</span>
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                Empowering the next generation of tech innovators
+A digitally empowered world where technology uplifts businesses and communities.      
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Sumic IT Solutions Ltd is a forward-thinking Information Technology company 
-                headquartered in Uganda, with operations spanning Africa and Asia. We are 
-                committed to driving digital transformation for Micro, Small, and Medium 
-                Enterprises (MSMEs) and Small and Medium Enterprises (SMEs).
+             Sumic IT Solutions Ltd is a forward thinking Information Technology company headquartered in
+Uganda, with operations spanning Africa and Asia. We are committed to driving digital
+transformation for Micro, Small, and Medium Enterprises (MSMEs) and Small and Medium
+Enterprises (SMEs).
               </p>
             </div>
 
@@ -104,21 +104,17 @@ const MoreFromSumicMegaMenu = ({ isVisible }) => {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Services</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-sm text-gray-600">Digital Transformation</span>
-                  <span className="text-sm font-medium text-green-600">For MSMEs</span>
+                  <span className="text-sm text-gray-600">Mobile Application Development</span>
+                  <span className="text-sm font-medium text-green-600">Software Development</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-sm text-gray-600">Tech Training Programs</span>
-                  <span className="text-sm font-medium text-green-600">Skills Development</span>
+                  <span className="text-sm text-gray-600">AI Model Development</span>
+                  <span className="text-sm font-medium text-green-600">ITES &amp; BPO (Information Technology Enabled Services & Business Process Outsourcing)</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                  <span className="text-sm text-gray-600">Business Solutions</span>
-                  <span className="text-sm font-medium text-green-600">Scalable Growth</span>
+                  <span className="text-sm text-gray-600">Digital Marketing</span>
                 </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-sm text-gray-600">Innovation Consulting</span>
-                  <span className="text-sm font-medium text-green-600">Emerging Markets</span>
-                </div>
+      
               </div>
               
               <div className="mt-6 p-4 bg-green-50 rounded-lg">
