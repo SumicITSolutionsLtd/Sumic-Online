@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 
 const ProductGrid = ({ 
-  title = "More to love",
+  title = "Only for you",
   products = [
     // {
     //   id: 1,
@@ -185,7 +185,7 @@ const ProductGrid = ({
     },
 
         {
-      id: 12,
+      id: 13,
       title: "Digital Power Supply Variable Voltage",
       price: 85000,
       originalPrice: 12000,
@@ -210,7 +210,7 @@ const ProductGrid = ({
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section className="product_grid max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {showTitle && (
         <div className="mb-8">
           <h2 className="discover_title text-3xl font-bold text-gray-900">{title}</h2>

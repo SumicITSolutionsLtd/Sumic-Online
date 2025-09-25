@@ -7,7 +7,7 @@ const DevelopmentBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 max-w-sm">
+    <div className="dev-banner fixed bottom-4 left-4 z-50 max-w-sm">
       <div className="bg-green-500 text-white rounded-lg shadow-2xl border border-green-600">
         <div className="p-4">
           <div className="flex items-start space-x-3">

@@ -1,15 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
-import Icon from '../../components/AppIcon';
-import Image from '../../components/AppImage';
-import CategorySidebar from './components/CategorySidebar';
-import FrequentlySearched from './components/FrequentlySearched';
-import PopularSuppliers from './components/PopularSuppliers';
-import FastCustomization from './components/FastCustomization';
-import TopRankingProducts from './components/TopRankingProducts';
-import NewArrivals from './components/NewArrivals';
-import ProductCatalog from './components/ProductCatalog';
 import Header from '../../components/ui/TrasparentHeader';
 import HeroSection from './components/HeroSection';
 import "../../styles/homepage.css"

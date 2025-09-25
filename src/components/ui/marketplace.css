@@ -2,3 +2,19 @@
 font-size: 35px;
     font-weight: 800;
     margin-bottom: 1rem;}
+
+.sbc{
+  display: flex;
+  gap: 2rem;
+  /* background-color:red; */
+}
+
+.sbc_grid_right{
+    width: 50%;
+}
+
+.sbc_grid_left{
+          width: 50%;
+  background-image: url("../../media/blue_bg.png");
+
+}

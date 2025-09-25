@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
+import { Routes as RouterRoutes, Route } from "react-router-dom";
 // import ScrollToTop from "components/ScrollToTop";
 // import ErrorBoundary from "components/ErrorBoundary";
 // import NotFound from "pages/NotFound";
@@ -14,9 +14,6 @@ import CartPage from './pages/cart';
 
 const Routes = () => {
   return (
-    <BrowserRouter>
-      {/* <ErrorBoundary> */}
-      {/* <ScrollToTop /> */}
       <RouterRoutes>
         {/* Define your route here */}
         <Route path="/dashboard" element={<Dashboard />} />
@@ -30,8 +27,6 @@ const Routes = () => {
         <Route path="/cart" element={<CartPage />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </RouterRoutes>
-      {/* </ErrorBoundary> */}
-    </BrowserRouter>
   );
 };
 

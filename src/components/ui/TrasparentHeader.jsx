@@ -9,14 +9,17 @@ import OrderProtectionMegaMenu from './megamenus/OrderProtectionMegaMenu';
 import FeaturedSelectionsMegaMenu from './megamenus/FeaturedSelectionsMegaMenu';
 import HelpCenterMegaMenu from './megamenus/HelpCenterMegaMenu';
 import MoreFromSumicMegaMenu from './megamenus/MoreFromSumicMegaMenu';
+
+
 import {
   ShoppingCart,
   Menu,
-  ClipboardList,
   User,
-  MessageCircle,
   Globe,
 } from "lucide-react";
+
+
+import TransparentMobileHeader from "../mobile_styles/Layout";
 
 const TrasparentHeader = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -172,6 +175,7 @@ const TrasparentHeader = () => {
           </Link>
         </div>
       </div>
+      {/* when scrolled */}
          {!scrolled && (
         <div className="header_extras" onMouseLeave={handleMegaMenuLeave}>
           <div className="header_extras-left">
@@ -256,6 +260,11 @@ const TrasparentHeader = () => {
           
         </div>
       )}
+
+
+      {/* one mobile */}
+
+      {/* <TransparentMobileHeader/> */}
    
     </div>
   );

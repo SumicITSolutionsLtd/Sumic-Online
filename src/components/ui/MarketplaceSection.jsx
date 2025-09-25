@@ -35,15 +35,15 @@ const MarketplaceSection = ({
 
       sold: "700+ sold"
     },
-    {
-      id: 3,
-      image: ProductImage1,
+    // {
+    //   id: 3,
+    //   image: ProductImage1,
 
-      price: "UGX51,350",
-      originalPrice: "UGX85,596",
-      rating: 4.9,
-      sold: "383 sold"
-    }
+    //   price: "UGX51,350",
+    //   originalPrice: "UGX85,596",
+    //   rating: 4.9,
+    //   sold: "383 sold"
+    // }
   ],
   categories = [
     {
@@ -158,25 +158,19 @@ const MarketplaceSection = ({
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <section className="Shop_by_category max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
       <h2 className='discover_title'>Shop by category</h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="sbc">
 
         {/* Left Section - Hero with Background */}
-        <div className="relative overflow-hidden rounded-xl border-2 border-gray-200 shadow-lg">
-          <div
-            className="relative h-96 lg:h-[500px]"
-            style={{
-              backgroundImage: `url('${heroData.backgroundImage}')`,
-              backgroundBlendMode: 'overlay'
-            }}
-          >
+        <div className="sbc_grid_left relative overflow-hidden rounded-xl border-2 border-gray-200 shadow-lg">
+          <div  className="relative" >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400/80 to-transparent"></div>
 
             {/* Hero Content */}
-            <div className="relative z-10 p-8 h-full flex flex-col justify-between text-white">
+            <div className="sbc_content relative z-10 p-8 h-full flex flex-col justify-between text-white">
               <div>
                 <h1 className="text-3xl lg:text-3xl font-bold mb-1">{heroData.title}</h1>
                 <p className="text-lg lg:text-xl mb-6">{heroData.subtitle}</p>
@@ -189,7 +183,7 @@ const MarketplaceSection = ({
               </div>
 
               {/* Product Cards */}
-              <div className="grid grid-cols-3 gap-3 mt-8">
+              <div className="sbc_grid grid grid grid-cols-3 gap-3 mt-8">
                 {productCards.map((product) => (
                   <div key={product.id} className="bg-white rounded-lg p-3 text-black border border-gray-200">
                     <div className="h-32 bg-gray-100 rounded mb-2">
@@ -214,13 +208,13 @@ const MarketplaceSection = ({
         </div>
 
         {/* Right Section - Category Grid */}
-        <div className="grid grid-cols-2 gap-2">
+        <div className="sbc_grid_right grid grid-cols-2 gap-2">
           {categories.map((category) => {
             return (
               <Link
                 key={category.id}
                 to={category.link}
-                className="relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-black-300 transition-colors cursor-pointer block group"
+                className="sbc_card relative overflow-hidden rounded-xl border-2 border-gray-200 hover:border-black-300 transition-colors cursor-pointer block group"
               >
                 {/* Background Image */}
                 <div

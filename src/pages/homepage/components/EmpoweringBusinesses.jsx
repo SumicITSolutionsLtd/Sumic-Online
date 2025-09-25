@@ -25,9 +25,9 @@ export default function EmpoweringBusinesses() {
           <img
             src={BG}
             alt="Team working"
-            className="w-full h-full object-cover"
+            className="eb_image w-full h-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
+          <div className="eb_holder absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
             <p className="eb_title text-green-500 text-sm font-semibold">START TODAY</p>
             <h2 className="text-white text-xl md:text-2xl font-bold">
               Our team is ready to get you started.
@@ -59,7 +59,7 @@ export default function EmpoweringBusinesses() {
           <img
             src={Wind}
             alt="Wind turbine"
-            className="w-full h-64 md:h-80 object-cover"
+            className="eb_image w-full h-64 md:h-80 object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
             <p className="eb_title text-green-500 text-sm font-semibold">OUR ESG PROMISES</p>

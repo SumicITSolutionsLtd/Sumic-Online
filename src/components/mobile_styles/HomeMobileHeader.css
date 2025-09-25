@@ -1,0 +1,16 @@
+.home-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #040404;
+    color: white;
+}
+
+.home-mobile-header .logo {
+    height: 28px;
+}
+
+.home-mobile-header .hamburger-icon {
+  cursor: pointer;
+}
