@@ -103,15 +103,20 @@ Enterprises (SMEs).
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Services</h3>
               <div className="space-y-4">
+                
                 <div className="flex justify-between items-center py-2 border-b border-gray-200">
                   <span className="text-sm text-gray-600">Mobile Application Development</span>
                 </div>
+                
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
                   <span className="text-sm font-medium text-green-600">Software Development</span>
                 </div>
+                
                 <div className="flex justify-between items-center py-2 border-b border-gray-200">
                   <span className="text-sm text-gray-600">AI Model Development</span>
                 </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                
+                <div className="flex justify-between items-center py-2 border-b border-gray-200">
                   <span className="text-sm font-medium text-green-600">ITES &a BPO (Information Technology Enabled Services & Business Process Outsourcing)</span>
                 </div>
                 
