@@ -95,7 +95,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={`fixed inset-0 z-[9999] transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-[999999999] transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       {/* Backdrop Overlay */}
       <div 
         className="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
@@ -121,7 +121,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
               <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm ${step >= 1 ? 'bg-green-600 text-white' : 'bg-gray-200'}`}>
                 1
               </div>
-              <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium hidden sm:block">Guest Info</span>
+              <span className="ml-1 sm:ml-2 text-xs sm:text-sm font-medium  sm:block">Guest Info</span>
             </div>
             <div className={`w-4 sm:w-8 h-0.5 ${step >= 2 ? 'bg-green-600' : 'bg-gray-200'}`}></div>
             <div className={`flex items-center ${step >= 2 ? 'text-green-600' : 'text-gray-400'}`}>
@@ -141,7 +141,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
         </div>
 
         {/* Content */}
-        <div className="h-full overflow-y-auto scrollbar-hide pb-20">
+        <div className="checkout_content h-full overflow-y-auto scrollbar-hide pb-20">
           <div className="p-4 sm:p-6">
           {/* Step 1: Guest Information */}
           {step === 1 && (

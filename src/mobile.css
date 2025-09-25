@@ -7,6 +7,9 @@
   height: max-content !important;
 }
 
+.checkout_content{
+  padding-bottom: 10rem !important;
+}
 
 /* 900 res and below */
 @media (max-width: 999px) {
