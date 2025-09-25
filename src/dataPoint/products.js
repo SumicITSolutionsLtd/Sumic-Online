@@ -1,4 +1,4 @@
-  export const products = [
+export const products = [
 
     {
       id: 2,
@@ -53,7 +53,7 @@
     {
       id: 5,
       title: "Trolley Storage Rack Mobile Cart 4 Tier",
-      price: 24262,
+      price: 24262,,
       originalPrice: 74150,
       rating: 4.8,
       reviewCount: 810,

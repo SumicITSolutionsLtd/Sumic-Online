@@ -1,7 +1,13 @@
 import React from 'react';
+import product_0 from '../../media/products/product_0.jpg';
+import product_1 from '../../media/products/product_1.jpg';
+import product_2 from '../../media/products/product_2.jpg';
+import product_3 from '../../media/products/product_3.jpg';
+import product_4 from '../../media/products/product_4.jpg';
+
 import ProductCard from './ProductCard';
 
-const ProductGrid = ({ 
+const ProductGrid = ({
   title = "Only for you",
   products = [
     // {
@@ -15,8 +21,8 @@ const ProductGrid = ({
     // //   reviewCount: 14000,
     //   soldCount: 191,
     //   images: [
-    //     '/src/media/products/product_0.jpg',
-    //     '/src/media/products/product_1.jpg'
+    //     product_0,
+    //     product_1
     //   ],
     //   badges: [
     //     { type: 'sale', text: 'Sale' },
@@ -32,8 +38,8 @@ const ProductGrid = ({
       rating: 4.7,
       reviewCount: 14000,
       images: [
-        '/src/media/products/product_1.jpg',
-        '/src/media/products/product_2.jpg'
+        product_1,
+        product_2
       ],
       badges: [
         { type: 'sale', text: 'Sale' }
@@ -48,8 +54,8 @@ const ProductGrid = ({
       rating: 4.4,
       reviewCount: 1000,
       images: [
-        '/src/media/products/product_2.jpg',
-        '/src/media/products/product_3.jpg'
+        product_2,
+        product_3
       ],
       badges: [
         { type: 'sale', text: 'Sale' }
@@ -65,8 +71,8 @@ const ProductGrid = ({
       rating: 5,
       reviewCount: 279,
       images: [
-        '/src/media/products/product_3.jpg',
-        '/src/media/products/product_4.jpg'
+        product_3,
+        product_4
       ],
       badges: [
         { type: 'sale', text: 'Sale' },
@@ -83,8 +89,8 @@ const ProductGrid = ({
       reviewCount: 810,
       soldCount: 191,
       images: [
-        '/src/media/products/product_4.jpg',
-        '/src/media/products/product_0.jpg'
+        product_4,
+        product_0
       ],
       badges: [
         { type: 'sale', text: 'Sale' },
@@ -100,8 +106,8 @@ const ProductGrid = ({
       rating: 5,
       reviewCount: 79,
       images: [
-        '/src/media/products/product_1.jpg',
-        '/src/media/products/product_2.jpg'
+        product_1,
+        product_2
       ],
       savings: 74150
     },
@@ -114,7 +120,7 @@ const ProductGrid = ({
       rating: 4.3,
       reviewCount: 500,
       images: [
-        '/src/media/products/product_3.jpg'
+        product_3
       ],
       badges: [
         { type: 'new', text: 'New' }
@@ -128,7 +134,7 @@ const ProductGrid = ({
       rating: 4.6,
       reviewCount: 1200,
       images: [
-        '/src/media/products/product_4.jpg'
+        product_4
       ],
       badges: [
         { type: 'hot', text: 'Hot' }
@@ -142,7 +148,7 @@ const ProductGrid = ({
       rating: 4.4,
       reviewCount: 800,
       images: [
-        '/src/media/products/product_0.jpg'
+        product_0
       ]
     },
     {
@@ -153,7 +159,7 @@ const ProductGrid = ({
       rating: 4.7,
       reviewCount: 950,
       images: [
-        '/src/media/products/product_2.jpg'
+        product_2
       ],
       badges: [
         { type: 'sale', text: 'Sale' }
@@ -167,7 +173,7 @@ const ProductGrid = ({
       rating: 4.5,
       reviewCount: 1500,
       images: [
-        '/src/media/products/product_1.jpg'
+        product_1
       ]
     },
     {
@@ -178,7 +184,7 @@ const ProductGrid = ({
       rating: 4.8,
       reviewCount: 350,
       images: [
-        '/src/media/products/product_4.jpg'
+        product_4
       ],
       badges: [
         { type: 'hot', text: 'Professional' }
@@ -193,7 +199,7 @@ const ProductGrid = ({
       rating: 4.8,
       reviewCount: 350,
       images: [
-        '/src/media/products/product_1.jpg'
+        product_1
       ],
       badges: [
         { type: 'hot', text: 'Professional' }
@@ -203,7 +209,7 @@ const ProductGrid = ({
   showTitle = true,
   columns = 6
 }) => {
-  
+
   const gridColsClass = {
     4: 'grid-cols-2 md:grid-cols-4',
     6: 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6',
@@ -217,7 +223,7 @@ const ProductGrid = ({
           <h2 className="discover_title text-3xl font-bold text-gray-900">{title}</h2>
         </div>
       )}
-      
+
       <div className={`grid ${gridColsClass[columns] || 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6'} gap-4`}>
         {products.map((product) => (
           <ProductCard
