@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from '../../../context/CartContext';
 import { XMarkIcon, CheckCircleIcon, CreditCardIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
+  const { clearCart } = useCart();
+  const navigate = useNavigate();
   const [step, setStep] = useState(1); // 1: Guest Info, 2: Payment, 3: Confirmation
   const [guestInfo, setGuestInfo] = useState({
     firstName: '',
@@ -63,15 +66,13 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
     
     // Mock payment processing
     setTimeout(() => {
-      const mockOrderNumber = 'SUM' + Date.now().toString().slice(-6);
-      setOrderNumber(mockOrderNumber);
       setIsProcessing(false);
       setStep(3);
     }, 3000);
   };
 
   const handleCompleteOrder = () => {
-    // Clear cart and close modal
+    clearCart();
     onClose();
     setStep(1);
     setGuestInfo({
@@ -88,8 +89,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
       provider: '',
       phoneNumber: ''
     });
-    // Clear cart after successful order
-    window.location.href = '/';
+    navigate('/products');
   };
 
   if (!isOpen) return null;
@@ -430,10 +430,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-3">Order Details</h4>
                 <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Order Number:</span>
-                    <span className="font-semibold">{orderNumber}</span>
-                  </div>
+                  
                   <div className="flex justify-between">
                     <span>Total Amount:</span>
                     <span className="font-semibold text-green-600">UGX {totalAmount.toLocaleString()}</span>
@@ -452,16 +449,6 @@ const CheckoutModal = ({ isOpen, onClose, cartItems, totalAmount }) => {
                     <span className="font-semibold">{guestInfo.address}</span>
                   </div>
                 </div>
-              </div>
-
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-blue-800 mb-2">What's Next?</h4>
-                <ul className="text-sm text-blue-700 space-y-1 text-left">
-                  <li>• You'll receive an email confirmation shortly</li>
-                  <li>• Our team will process your order within 24 hours</li>
-                  <li>• You'll get tracking information once shipped</li>
-                  <li>• Expected delivery: 3-5 business days</li>
-                </ul>
               </div>
 
               <button
