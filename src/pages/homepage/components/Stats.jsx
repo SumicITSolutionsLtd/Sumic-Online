@@ -1,22 +1,50 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
 import "../../../styles/stats_area.css";
 
+// Custom hook for intersection observer
+const useIntersectionObserver = (options = {}) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    }, options);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [options]);
+
+  return [ref, isIntersecting];
+};
+
 function Stats() {
+  const [ref, isVisible] = useIntersectionObserver({
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
   return (
-    <div className='stats-section'>
+    <div className='stats-section' ref={ref}>
       <h2 className='stats_title'>Exlore hundreds of offerings tailored to your business needs</h2>
       <div className='stats-area'>
         <div className='top-stats'>
           <div className='stats-item border-l'>
             <h3 className='stats-item-title'>
-              <CountUp end={10} redraw={true}>
-                {({ countUpRef, start }) => (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                )}
+              <CountUp 
+                end={10} 
+                redraw={true}
+                start={isVisible ? 0 : undefined}
+              >
+                {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>+
             </h3>
             <p className='stats-item-desc'>
@@ -25,12 +53,12 @@ function Stats() {
           </div>
           <div className='stats-item border-l'>
             <h3 className='stats-item-title'>
-              <CountUp end={50} redraw={true}>
-                {({ countUpRef, start }) => (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                )}
+              <CountUp 
+                end={50} 
+                redraw={true}
+                start={isVisible ? 0 : undefined}
+              >
+                {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>+
             </h3>
             <p className='stats-item-desc'>
@@ -41,12 +69,12 @@ function Stats() {
         <div className='top-stats lower-stats'>
           <div className='stats-item border-l'>
             <h3 className='stats-item-title'>
-              <CountUp end={590} redraw={true}>
-                {({ countUpRef, start }) => (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                )}
+              <CountUp 
+                end={590} 
+                redraw={true}
+                start={isVisible ? 0 : undefined}
+              >
+                {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
             </h3>
             <p className='stats-item-desc'>
@@ -55,12 +83,12 @@ function Stats() {
           </div>
           <div className='stats-item border-l'>
             <h3 className='stats-item-title'>
-              <CountUp end={30} redraw={true}>
-                {({ countUpRef, start }) => (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                )}
+              <CountUp 
+                end={30} 
+                redraw={true}
+                start={isVisible ? 0 : undefined}
+              >
+                {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>+
             </h3>
             <p className='stats-item-desc'>

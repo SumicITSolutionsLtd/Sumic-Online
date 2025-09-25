@@ -4,6 +4,7 @@ import { Menu } from 'lucide-react';
 import Logo from '../../media/logo.png'; // Using the white logo for a red background
 import { Link } from 'react-router-dom';
 import './HomeMobileHeader.css';
+import CartIcon from '../ui/CartIcon';
 
 const HomeMobileHeader = ({ onMenuClick }) => {
   return (
@@ -11,7 +12,10 @@ const HomeMobileHeader = ({ onMenuClick }) => {
       <Link to="/">
         <img src={Logo} alt="sumic online logo" className="logo" />
       </Link>
-      <Menu className="hamburger-icon" onClick={onMenuClick} />
+      <div className="flex items-center gap-4">
+        <CartIcon size={20} className="text-white" />
+        <Menu className="hamburger-icon" onClick={onMenuClick} />
+      </div>
     </div>
   );
 };

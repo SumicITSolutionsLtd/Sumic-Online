@@ -12,11 +12,11 @@ import MoreFromSumicMegaMenu from './megamenus/MoreFromSumicMegaMenu';
 
 
 import {
-  ShoppingCart,
   Menu,
   User,
   Globe,
 } from "lucide-react";
+import CartIcon from "./CartIcon";
 
 
 import TransparentMobileHeader from "../mobile_styles/Layout";
@@ -166,9 +166,7 @@ const TrasparentHeader = () => {
             <ClipboardList size={22} />
           </Link> */}
 
-          <Link to="/cart" className="header_ic" title="Cart">
-            <ShoppingCart size={22} />
-          </Link>
+          <CartIcon />
           <Link to="/login" className="header_ic ic_nest" title="Login">
             <User size={22} />
             <p>Sign in</p>

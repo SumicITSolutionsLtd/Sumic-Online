@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import product_0 from '../../media/products/product_0.jpg';
 import product_1 from '../../media/products/product_1.jpg';
 import product_2 from '../../media/products/product_2.jpg';
@@ -6,6 +6,7 @@ import product_3 from '../../media/products/product_3.jpg';
 import product_4 from '../../media/products/product_4.jpg';
 
 import ProductCard from './ProductCard';
+import CartNotificationBanner from './CartNotificationBanner';
 
 const ProductGrid = ({
   title = "Only for you",
@@ -209,6 +210,27 @@ const ProductGrid = ({
   showTitle = true,
   columns = 6
 }) => {
+  const [notification, setNotification] = useState({
+    isVisible: false,
+    message: '',
+    productName: ''
+  });
+
+  const handleAddToCart = (product) => {
+    setNotification({
+      isVisible: true,
+      message: 'Item added to cart successfully!',
+      productName: product.title
+    });
+  };
+
+  const handleCloseNotification = () => {
+    setNotification({
+      isVisible: false,
+      message: '',
+      productName: ''
+    });
+  };
 
   const gridColsClass = {
     4: 'grid-cols-2 md:grid-cols-4',
@@ -217,22 +239,35 @@ const ProductGrid = ({
   };
 
   return (
-    <section className="product_grid max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {showTitle && (
-        <div className="mb-8">
-          <h2 className="discover_title text-3xl font-bold text-gray-900">{title}</h2>
-        </div>
-      )}
+    <>
+      <section className="product_grid max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {showTitle && (
+          <div className="mb-8">
+            <h2 className="discover_title text-3xl font-bold text-gray-900">{title}</h2>
+          </div>
+        )}
 
-      <div className={`grid ${gridColsClass[columns] || 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6'} gap-4`}>
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            {...product}
-          />
-        ))}
-      </div>
-    </section>
+        <div className={`grid ${gridColsClass[columns] || 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6'} gap-4`}>
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              {...product}
+              onAddToCart={handleAddToCart}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Cart Notification Banner */}
+      <CartNotificationBanner
+        isVisible={notification.isVisible}
+        message={notification.message}
+        productName={notification.productName}
+        onClose={handleCloseNotification}
+        duration={3000}
+        offsetTop={112}
+      />
+    </>
   );
 };
 

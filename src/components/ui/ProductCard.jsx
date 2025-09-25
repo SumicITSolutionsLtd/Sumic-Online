@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
 const ProductCard = ({
   id,
@@ -14,10 +15,12 @@ const ProductCard = ({
   badges = [],
   savings,
   promotions = [],
-  link = `/product/${id}`
+  link = `/product/${id}`,
+  onAddToCart
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { addToCart } = useCart();
 
   const formatPrice = (price) => {
     return price ? `UGX${price.toLocaleString()}` : '';
@@ -52,6 +55,28 @@ const ProductCard = ({
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const product = {
+      id,
+      title,
+      price,
+      originalPrice,
+      images,
+      badges,
+      savings
+    };
+    
+    addToCart(product);
+    
+    // Call the parent's onAddToCart callback if provided
+    if (onAddToCart) {
+      onAddToCart(product);
+    }
   };
 
   return (
@@ -201,12 +226,15 @@ const ProductCard = ({
           isHovered ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
         }`}>
           <div className="p-4 space-y-2">
-            <button className="w-full bg-black text-white py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-colors">
+            <button 
+              onClick={handleAddToCart}
+              className="w-full bg-green-500 text-white py-2 rounded-md text-sm font-medium hover:bg-green-600 transition-colors"
+            >
               Add to Cart
             </button>
-            <button className="w-full border border-gray-300 text-gray-700 py-2 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
+            {/* <button className="w-full border border-gray-300 text-gray-700 py-2 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors">
               Similar items
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

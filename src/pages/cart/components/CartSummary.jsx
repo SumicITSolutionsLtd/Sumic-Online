@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartSummary = ({ itemsTotal, discount, subtotal, shipping, estimatedTotal }) => {
+const CartSummary = ({ itemsTotal, discount, subtotal, shipping, estimatedTotal, cartItemCount, onCheckout }) => {
   return (
     <div className="bg-white p-6 rounded-2xl shadow w-full lg:w-1/3">
       <h2 className="text-xl font-bold mb-4">Summary</h2>
@@ -38,17 +38,26 @@ const CartSummary = ({ itemsTotal, discount, subtotal, shipping, estimatedTotal 
       </div>
 
       {/* Checkout Button */}
-      <button className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-2xl font-semibold">
-        Checkout (2)
+      <button 
+        onClick={onCheckout}
+        className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-2xl font-semibold transition-colors"
+      >
+        Checkout ({cartItemCount})
       </button>
 
       {/* Payment Options */}
       <div className="mt-6">
         <p className="text-sm font-medium mb-2">Pay with</p>
         <div className="flex gap-2">
-          <div className="w-12 h-8 bg-gray-100 rounded"></div>
-          <div className="w-12 h-8 bg-gray-100 rounded"></div>
-          <div className="w-12 h-8 bg-gray-100 rounded"></div>
+          <div className="w-12 h-8 bg-gray-100 rounded flex items-center justify-center">
+            <span className="text-xs text-gray-600">MTN</span>
+          </div>
+          <div className="w-12 h-8 bg-gray-100 rounded flex items-center justify-center">
+            <span className="text-xs text-gray-600">Airtel</span>
+          </div>
+          <div className="w-12 h-8 bg-gray-100 rounded flex items-center justify-center">
+            <span className="text-xs text-gray-600">Card</span>
+          </div>
         </div>
       </div>
 

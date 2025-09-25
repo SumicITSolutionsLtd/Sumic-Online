@@ -158,23 +158,11 @@ const Footer = () => {
               <Link to="#" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
               <span>-</span>
               <Link to="#" className="hover:text-gray-300 transition-colors">Sitemap</Link>
-              <span>-</span>
-              <Link to="#" className="hover:text-gray-300 transition-colors">Terms of Use</Link>
-              <span>-</span>
-              <Link to="#" className="hover:text-gray-300 transition-colors">Information for EU consumers</Link>
-              <span>-</span>
-              <Link to="#" className="text-white font-semibold">Legal Information / Imprint</Link>
+     
+             
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between items-center mt-2 text-xs text-gray-400">
-            <div className="flex items-center gap-2">
-              <span>© 2010-{new Date().getFullYear()} SumicOnline.com. All rights reserved.</span>
-              <img src="/api/placeholder/20/12" alt="China Flag" className="w-5 h-3" />
-              <span>增值电信业务经营许可证 浙B2-20120091-8</span>
-              <img src="/api/placeholder/20/12" alt="Police Badge" className="w-5 h-3" />
-              <span>浙公网安备 33010802002248号</span>
-            </div>
-          </div>
+          
         </div>
       </div>
     </footer>

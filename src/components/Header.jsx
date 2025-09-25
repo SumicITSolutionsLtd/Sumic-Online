@@ -10,13 +10,13 @@ import FeaturedSelectionsMegaMenu from "../components/ui/megamenus/FeaturedSelec
 import HelpCenterMegaMenu from "../components/ui/megamenus/HelpCenterMegaMenu";
 import MoreFromSumicMegaMenu from "../components/ui/megamenus/MoreFromSumicMegaMenu";
 import {
-  ShoppingCart,
   Menu,
   ClipboardList,
   User,
   MessageCircle,
   Globe,
 } from "lucide-react";
+import CartIcon from "./ui/CartIcon";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -67,9 +67,7 @@ const Header = () => {
             <ClipboardList size={22} />
           </Link> */}
 
-          <Link to="/cart" className="header_ic" title="Cart">
-            <ShoppingCart size={22} />
-          </Link>
+          <CartIcon />
           <Link to="/login" className="header_ic ic_nest" title="Login">
             <User size={22} />
             <p>Sign in</p>

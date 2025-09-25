@@ -33,15 +33,12 @@ const Drawer = ({ isOpen, onClose }) => {
           </div>
 
            <div className="drawer-section">
-            <Link to="/cart" className="drawer-link" onClick={onClose}>
+            <Link to="/cart" className="drawer-language-link drawer-link" onClick={onClose}>
               <ShoppingCart size={22} />
               <span>Cart</span>
             </Link>
 
-            <div  className="drawer-language-link drawer-link">
-              <Globe size={22} />
-              <span>English</span>
-            </div>
+          
           </div>
           <div className="drawer-section">
             <h3 className="drawer-section-title">All Categories</h3>
