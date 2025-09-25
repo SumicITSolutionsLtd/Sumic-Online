@@ -7,7 +7,7 @@ const CartNotificationBanner = ({
   productName, 
   onClose, 
   duration = 3000,
-  offsetTop = 88
+  offsetTop = 140
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -29,7 +29,7 @@ const CartNotificationBanner = ({
 
   return (
     <div
-      className="fixed left-1/2 transform -translate-x-1/2 w-full max-w-sm mx-4"
+      className="fixed left-1/2 transform -translate-x-1/2 w-full max-w-sm mx-10"
       style={{ top: offsetTop, zIndex: 2000 }}
     >
       <div
