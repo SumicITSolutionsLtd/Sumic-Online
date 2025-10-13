@@ -15,7 +15,7 @@ function App() {
       <CartProvider>
         <Layout>
           <Routes />
-          <DevelopmentBanner />
+         {/* <DevelopmentBanner /> */}
           <ScrollToTopButton />
         </Layout>
       </CartProvider>
